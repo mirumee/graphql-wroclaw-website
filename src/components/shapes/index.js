@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components"
 
 const transitionY = keyframes`
   0% {
@@ -13,11 +13,11 @@ const transitionY = keyframes`
     transform: translateY(2px);
   }
 
-`;
+`
 
 const animation = () => css`
   ${transitionY} 3s ease-in-out infinite;
-`;
+`
 
 const Rectangle = styled.div`
   width: 0;
@@ -26,6 +26,6 @@ const Rectangle = styled.div`
   border-right: 3px solid transparent;
   border-top: 6px solid ${props => props.theme.colors.mainBrandColor};
   animation: ${props => (props.animated ? animation : ``)};
-`;
+`
 
-export default Rectangle;
+export default Rectangle
