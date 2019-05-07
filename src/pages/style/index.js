@@ -16,7 +16,7 @@ const transitionY = keyframes`
 
 `
 
-const StyledImg = styled(Img)`
+const StyledImage = styled(Img)`
   position: absolute !important;
   display: block !important;
   top: -50px !important;
@@ -66,4 +66,51 @@ const FlexContainer = styled.div`
   }
 `
 
-export { StyledBackground, StyledImg, HeaderContainer, FlexContainer }
+const StyledContainer = styled.div`
+  background-color: ${props => props.theme.colors.primaryColor};
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: ${props => props.theme.colors.secondaryColor};
+`
+
+const OrnamentLeft = styled.div`
+  border-left: 8px solid ${props => props.theme.colors.primaryColor};
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+`
+
+const DecoratedImg = styled(Img)`
+  position: relative;
+  overflow: visible !important;
+  margin-bottom: 2rem;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 85px;
+    height: 30px;
+    bottom: 0;
+    right: 50%;
+    background: ${props => props.theme.colors.mainBrandColor};
+    color: ${props => props.theme.colors.primaryColor};
+    z-index: 10;
+    transform: translate(50%, 50%);
+  }
+`
+
+const Section = styled.div`
+  margin: 30px 20px 20px 30px;
+`
+
+export {
+  StyledBackground,
+  StyledImage,
+  HeaderContainer,
+  FlexContainer,
+  OrnamentLeft,
+  DecoratedImg,
+  Section,
+  StyledContainer,
+}
