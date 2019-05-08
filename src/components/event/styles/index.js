@@ -8,7 +8,8 @@ import Title from "./Title"
 import ContentContainer from "./ContentContainer"
 
 const Event = styled.div`
-  width: 300px;
+  min-width: 300px;
+  max-width: 660px;
   margin: 0 auto 50px auto;
   position: relative;
   display: flex;

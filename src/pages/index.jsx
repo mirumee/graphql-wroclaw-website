@@ -70,7 +70,7 @@ const IndexPage = () => (
             </FlexContainer>
             <StyledImage fluid={data.socialBoxImg.childImageSharp.fluid} />
           </StyledBackground>
-          <Flex flexWrap="wrap" mx={[3, 4]}>
+          <Flex flexWrap="wrap" mx={[3, 4, 5, 6]}>
             <Box width={[1, 1, 1 / 2]} pl={[0, 5]}>
               <OrnamentLeft>
                 <h2>Speakers</h2>
@@ -82,6 +82,7 @@ const IndexPage = () => (
               css={{
                 textAlign: "center",
               }}
+              mb={[0, 0, -7]}
             >
               <DecoratedImg fluid={data.firstSpeaker.childImageSharp.fluid} />
               <h4>Marcin Gębala</h4>
@@ -98,7 +99,7 @@ const IndexPage = () => (
               <h4>Marcin Gębala</h4>
               <p>Python Developer</p>
             </Box>
-            <Box width={1} mx={[0, 0, 5]}>
+            <Box width={[1, 1, 1, 3 / 4, 2 / 3]} mx="auto">
               <StyledContainer>
                 <h3>Add more to the power of GraphQL</h3>
                 <StyledButton secondary text="Submit Your Talk" />
@@ -112,11 +113,12 @@ const IndexPage = () => (
             css={{
               textAlign: "center",
             }}
+            justifyContent="center"
           >
             <Box mb={4}>
               <h2>About GraphQL Wrocław</h2>
             </Box>
-            <Box>
+            <Box width={[1, 1, 1, 2 / 3]}>
               <p>
                 Knowledge: Cubed. GraphQL Wroclaw is a community of with a
                 shared love for new, powerful technology. We believe that
@@ -126,9 +128,9 @@ const IndexPage = () => (
             </Box>
           </Flex>
           <Flex
-            px={[3, 3, 5, 6, 7]}
+            px={[3, 3, 2, 6, 7]}
             my={5}
-            justifyContent="center"
+            justifyContent="space-evenly"
             flexWrap="wrap"
           >
             <Box
@@ -140,15 +142,15 @@ const IndexPage = () => (
             >
               <h2>Past Events</h2>
             </Box>
-            <Box width={[1, 1, 1 / 2]}>
+            <Box width={[1, 1, 2 / 5, 1 / 3, 2 / 5]}>
               <EventContainer />
             </Box>
-            <Box width={[1, 1, 1 / 2]}>
+            <Box width={[1, 1, 2 / 5, 1 / 3, 2 / 5]}>
               <EventContainer />
             </Box>
           </Flex>
-          <Flex flexWrap="wrap">
-            <Box width={[1, 1, 2 / 3]} order={[1, 1, 2]} px={3}>
+          <Flex flexWrap="wrap" px={[3, 4, 5, 6]} alignItems="center">
+            <Box width={[1, 1, 2 / 3, 1 / 2]} order={[1, 1, 2]} px={3}>
               <OrnamentLeft>
                 <h2>Join our Stream</h2>
                 <p>
@@ -159,15 +161,21 @@ const IndexPage = () => (
                 <StyledButton text="Watch stream" />
               </OrnamentLeft>
             </Box>
-            <Box width={[1, 1, 1 / 3]} order={[2, 2, 1]}>
+            <Box width={[1, 1, 1 / 3, 1 / 2]} order={[2, 2, 1]}>
               <Img fluid={data.socialBox.childImageSharp.fluid} />
             </Box>
           </Flex>
           <Flex mx={3} my={4} flexWrap="wrap" justifyContent="center">
-            <Box mb={4}>
+            <Box
+              mb={4}
+              width={1}
+              css={{
+                textAlign: "center",
+              }}
+            >
               <h2>Organizers</h2>
             </Box>
-            <Box>
+            <Box width={[1, 1, 1, 2 / 3]}>
               <LogoContainer>
                 <Logo.Saleor />
                 <Logo.Mirumee />
