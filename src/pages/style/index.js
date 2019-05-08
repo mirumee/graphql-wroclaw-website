@@ -78,14 +78,19 @@ const StyledContainer = styled.div`
 
 const OrnamentLeft = styled.div`
   border-left: 8px solid ${props => props.theme.colors.primaryColor};
-  padding-left: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0 1rem 1rem;
+`
+
+const SpeakersContainer = styled.div`
+  text-align: center;
   margin-bottom: 2rem;
 `
 
 const DecoratedImg = styled(Img)`
   position: relative;
   overflow: visible !important;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   &:before {
     content: "";
     position: absolute;
@@ -104,6 +109,29 @@ const Section = styled.div`
   margin: 30px 20px 20px 30px;
 `
 
+const LogoContainer = styled.div`
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 360px;
+  ${props =>
+    props.theme.media.laptop`justify-content: center;   max-width: none`}
+
+  svg {
+    padding: 30px;
+    height: calc(100px + 1vw);
+    width: calc(237px + 1vw);
+    background: rgba(41, 37, 91, 0.05);
+  }
+
+  svg + svg {
+    margin-top: 33px;
+    margin-left: auto;
+    ${props => props.theme.media.laptop`margin-left: 20px`}
+  }
+`
+
 export {
   StyledBackground,
   StyledImage,
@@ -113,4 +141,6 @@ export {
   DecoratedImg,
   Section,
   StyledContainer,
+  SpeakersContainer,
+  LogoContainer,
 }

@@ -451,6 +451,8 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  line-height: 1.7;
+  letter-spacing: 0.8px;
 }
 figure {
   margin-left: 0;

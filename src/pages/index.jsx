@@ -1,10 +1,11 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { Flex, Box } from "@rebass/grid"
 
 import EventContainer from "../components/event"
-import { StyledButton } from "../components/button"
-import Rectangle from "../components/shapes"
+import { StyledButton } from "../components/shared/button"
+import Rectangle from "../components/shared/shapes"
 import Layout from "../components/layout"
 import {
   HeaderContainer,
@@ -13,8 +14,8 @@ import {
   FlexContainer,
   OrnamentLeft,
   DecoratedImg,
-  Section,
   StyledContainer,
+  LogoContainer,
 } from "./style"
 import Logo from "../icons"
 
@@ -69,44 +70,85 @@ const IndexPage = () => (
             </FlexContainer>
             <StyledImage fluid={data.socialBoxImg.childImageSharp.fluid} />
           </StyledBackground>
-          <Section>
-            <OrnamentLeft>
-              <h2>Speakers</h2>
-            </OrnamentLeft>
-            <div>
+          <Flex flexWrap="wrap" mx={[3, 4]}>
+            <Box width={[1, 1, 1 / 2]} pl={[0, 5]}>
+              <OrnamentLeft>
+                <h2>Speakers</h2>
+              </OrnamentLeft>
+            </Box>
+            <Box
+              width={[1, 1, 1 / 2]}
+              pl={[0, 0, 3]}
+              css={{
+                textAlign: "center",
+              }}
+            >
               <DecoratedImg fluid={data.firstSpeaker.childImageSharp.fluid} />
               <h4>Marcin Gębala</h4>
               <p>Python Developer</p>
-            </div>
-            <div>
+            </Box>
+            <Box
+              width={[1, 1, 1 / 2]}
+              pr={[0, 0, 3]}
+              css={{
+                textAlign: "center",
+              }}
+            >
               <DecoratedImg fluid={data.secondSpeaker.childImageSharp.fluid} />
               <h4>Marcin Gębala</h4>
               <p>Python Developer</p>
-            </div>
-            <div>
+            </Box>
+            <Box width={1} mx={[0, 0, 5]}>
               <StyledContainer>
                 <h3>Add more to the power of GraphQL</h3>
                 <StyledButton secondary text="Submit Your Talk" />
               </StyledContainer>
-            </div>
-          </Section>
-          <Section>
-            <h2>About GraphQL Wrocław</h2>
-            <p>
-              Knowledge: Cubed. GraphQL Wroclaw is a community of with a shared
-              love for new, powerful technology. We believe that through sharing
-              and engagement, we can make Wroclaw a local and global leader in
-              one of the world’s fastest growing languages.
-            </p>
-          </Section>
-          <Section>
-            <div>
+            </Box>
+          </Flex>
+          <Flex
+            px={3}
+            my={5}
+            flexWrap="wrap"
+            css={{
+              textAlign: "center",
+            }}
+          >
+            <Box mb={4}>
+              <h2>About GraphQL Wrocław</h2>
+            </Box>
+            <Box>
+              <p>
+                Knowledge: Cubed. GraphQL Wroclaw is a community of with a
+                shared love for new, powerful technology. We believe that
+                through sharing and engagement, we can make Wroclaw a local and
+                global leader in one of the world’s fastest growing languages.
+              </p>
+            </Box>
+          </Flex>
+          <Flex
+            px={[3, 3, 5, 6, 7]}
+            my={5}
+            justifyContent="center"
+            flexWrap="wrap"
+          >
+            <Box
+              width={1}
+              mb={4}
+              css={{
+                textAlign: "center",
+              }}
+            >
               <h2>Past Events</h2>
+            </Box>
+            <Box width={[1, 1, 1 / 2]}>
               <EventContainer />
-            </div>
-          </Section>
-          <Section>
-            <div>
+            </Box>
+            <Box width={[1, 1, 1 / 2]}>
+              <EventContainer />
+            </Box>
+          </Flex>
+          <Flex flexWrap="wrap">
+            <Box width={[1, 1, 2 / 3]} order={[1, 1, 2]} px={3}>
               <OrnamentLeft>
                 <h2>Join our Stream</h2>
                 <p>
@@ -116,18 +158,22 @@ const IndexPage = () => (
                 </p>
                 <StyledButton text="Watch stream" />
               </OrnamentLeft>
+            </Box>
+            <Box width={[1, 1, 1 / 3]} order={[2, 2, 1]}>
               <Img fluid={data.socialBox.childImageSharp.fluid} />
-            </div>
-          </Section>
-          <Section>
-            <div>
+            </Box>
+          </Flex>
+          <Flex mx={3} my={4} flexWrap="wrap" justifyContent="center">
+            <Box mb={4}>
               <h2>Organizers</h2>
-              <div>
+            </Box>
+            <Box>
+              <LogoContainer>
                 <Logo.Saleor />
                 <Logo.Mirumee />
-              </div>
-            </div>
-          </Section>
+              </LogoContainer>
+            </Box>
+          </Flex>
         </>
       )}
     />

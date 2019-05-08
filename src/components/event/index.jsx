@@ -2,18 +2,12 @@ import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 
 import Event from "./styles"
-import PlayButton from "../playButton"
+import PlayButton from "../shared/playButton"
 import Logo from "../../icons"
 
 class EventConteint extends React.Component {
   state = {
-    menuOpen: true,
-    height: ``,
-  }
-
-  componentDidMount() {
-    const height = document.getElementById(`content`).clientHeight
-    this.setState({ height })
+    menuOpen: false,
   }
 
   toggleList() {
@@ -44,7 +38,7 @@ class EventConteint extends React.Component {
                 <Event.Title>
                   GRAPHQL WROCŁAW #1
                   <br />
-                  REST IS HISTORY
+                  REST IS HISTORY {height}
                 </Event.Title>
               </Event.Placeholder>
               <Event.Button
@@ -53,7 +47,7 @@ class EventConteint extends React.Component {
               >
                 <Logo.Arrow />
               </Event.Button>
-              <Event.Content id="content" height={height} menuOpen={menuOpen}>
+              <Event.Content id="content" menuOpen={menuOpen}>
                 <p>Videos</p>
                 <Event.ContentSeparator />
                 <Event.ContentContainer>
