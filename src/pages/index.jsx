@@ -7,6 +7,7 @@ import EventContainer from "../components/event"
 import { StyledButton } from "../components/shared/button"
 import Rectangle from "../components/shared/shapes"
 import Layout from "../components/layout"
+import CarouselContainer from "../components/carousel"
 import {
   HeaderContainer,
   StyledBackground,
@@ -126,6 +127,9 @@ const IndexPage = () => (
                 global leader in one of the world’s fastest growing languages.
               </p>
             </Box>
+            <Box width={1}>
+              <CarouselContainer />
+            </Box>
           </Flex>
           <Flex
             px={[3, 3, 2, 6, 7]}
@@ -142,10 +146,10 @@ const IndexPage = () => (
             >
               <h2>Past Events</h2>
             </Box>
-            <Box width={[1, 1, 2 / 5, 1 / 3, 2 / 5]}>
+            <Box width={[1, 1, 2 / 5, 2 / 5, 2 / 5]}>
               <EventContainer />
             </Box>
-            <Box width={[1, 1, 2 / 5, 1 / 3, 2 / 5]}>
+            <Box width={[1, 1, 2 / 5, 2 / 5, 2 / 5]}>
               <EventContainer />
             </Box>
           </Flex>

@@ -9,11 +9,15 @@ import ContentContainer from "./ContentContainer"
 
 const Event = styled.div`
   min-width: 300px;
-  max-width: 660px;
+  max-width: 300px;
   margin: 0 auto 50px auto;
   position: relative;
   display: flex;
   flex-wrap: wrap;
+
+  ${props => props.theme.media.laptop`max-width: 400px;`}
+  ${props => props.theme.media.laptopL`max-width: 400px;`}
+  ${props => props.theme.media.desktop`max-width: unset;`}
 `
 
 Event.Button = Button

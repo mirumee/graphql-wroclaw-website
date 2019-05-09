@@ -1,11 +1,11 @@
-import styled from "styled-components";
-import BackgroundImage from "gatsby-background-image";
+import styled from "styled-components"
+import BackgroundImage from "gatsby-background-image"
 
 const Placeholder = styled(BackgroundImage)`
   width: 100%;
-  height: 197px;
+  padding-top: 40%;
   display: flex;
   align-items: flex-start;
-`;
+`
 
-export default Placeholder;
+export default Placeholder

@@ -36,7 +36,7 @@ export const StyledButton = styled.button`
     content: "${text || ` `}";
     `}
     position: absolute;
-    width: 265px;
+    width: 100%;
     height: 60px;
     top: -10px;
     left: -10px;
