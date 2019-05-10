@@ -7,6 +7,7 @@ const sizes = {
   laptop: `768`,
   laptopL: `1024`,
   desktop: `1440`,
+  desktopL: `1920`,
   "4k": `2560`,
 }
 
@@ -30,6 +31,8 @@ export const theme = {
   },
   // media queries
   media,
+  breakpoints: ["375px", "768px", "1024px", `1440px`, `1920px`],
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
 }
 
 export default theme

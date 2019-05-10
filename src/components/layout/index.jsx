@@ -3,14 +3,16 @@ import PropTypes from "prop-types"
 import { ThemeProvider } from "styled-components"
 import { theme } from "../../styles/theme"
 import { GlobalStyle } from "../../styles/GlobalStyle"
-import Header from "../header"
+import Navbar from "../navbar"
+import Footer from "../footer"
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
-      <Header />
+      <Navbar />
       <main>{children}</main>
+      <Footer />
     </>
   </ThemeProvider>
 )
