@@ -6,7 +6,7 @@ export const StyledButton = styled.button`
   top: 10px;
   left: 10px;
   border: none;
-  margin: 25px 0 0 0;
+  margin-top: 10px;
   position: relative;
   background-color: transparent;
 
@@ -19,22 +19,23 @@ export const StyledButton = styled.button`
   props.secondary
     ? props.theme.colors.secondaryColor
     : props.theme.colors.primaryColor
-} 25%, rgba(255, 255, 255, 0) 0%),
+} 19%, rgba(255, 255, 255, 0) 0%),
     linear-gradient(to right, ${
   props.secondary
     ? props.theme.colors.secondaryColor
     : props.theme.colors.primaryColor
-} 25%, rgba(255, 255, 255, 0) 0%),
+} 19%, rgba(255, 255, 255, 0) 0%),
     linear-gradient(transparent 50%, rgba(255, 255, 255, 0) 0%)`};
 
   background-position: 100% 100%;
   background-repeat: repeat-x, repeat-y;
-  background-size: 13px 3px, 3px 13px;
+  background-size: 17px 3px, 3px 17px;
 
   &:after {
     ${({ text }) => `
     content: "${text || ` `}";
     `}
+    font-weight: bold;
     position: absolute;
     width: 100%;
     height: 60px;
