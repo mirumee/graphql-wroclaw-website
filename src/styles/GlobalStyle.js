@@ -240,7 +240,7 @@ h1 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -266,7 +266,7 @@ h2 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -292,7 +292,7 @@ h3 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -314,7 +314,7 @@ h4 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
@@ -344,7 +344,7 @@ h5 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -370,7 +370,7 @@ h6 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
