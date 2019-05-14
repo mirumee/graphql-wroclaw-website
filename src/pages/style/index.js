@@ -1,41 +1,52 @@
 import styled, { keyframes } from "styled-components"
 import Img from "gatsby-image"
 
-const transitionY = keyframes`
+
+const animation = (offset) => {
+  return keyframes`
   0% {
-    transform: translateY(4px);
+    transform: translateY(${offset}px);
   }
 
   50% {
-    transform: translateY(-4px);
+    transform: translateY(-${offset}px);
   }
 
   100% {
-    transform: translateY(4px);
+    transform: translateY(${offset}px);
   }
-
 `
+}
+
+const between = (from, to, fromWidth, toWidth) => {
+  const slope =  (to - from) / (toWidth - fromWidth);
+  const base = from - slope * fromWidth;
+  return `calc(${base}px + (100vw * ${slope}))`;
+}
+
 
 const StyledImage = styled(Img)`
   position: absolute !important;
   display: block !important;
-  top: -50px !important;
+  top: -30px !important;
   right: 0;
-  animation: ${transitionY} 5s ease-in-out infinite;
+  animation: ${animation(4)} 5s ease-in-out infinite;
   div {
     padding-bottom: 0 !important;
   }
   img {
     position: unset !important;
   }
+
+  ${props => props.theme.media.desktop`  animation: ${animation(7)} 5s ease-in-out infinite;`}
 `
 
 const StyledBackground = styled.div`
   position: relative;
   background: linear-gradient(
-    166deg,
-    rgba(228, 228, 228, 0) 18%,
-    rgba(192, 232, 244, 1) 45%,
+    171deg,
+    rgba(228, 228, 228, 0) -3%,
+    rgba(192, 232, 244, 1) 33%,
     rgba(243, 246, 246, 0) 83%
   );
 `
@@ -43,12 +54,16 @@ const StyledBackground = styled.div`
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 70% 20px 20px 20px;
+  padding: 76% 0 20px 0;
   font-weight: bold;
   width: 100%;
   text-transform: uppercase;
   position: relative;
   z-index: 1;
+
+  ${props => props.theme.media.laptop`  padding: 60% 20px 20px 20px;`}
+  ${props => props.theme.media.laptopL`  padding: 40% 20px 20px 20px;`}
+  ${props => props.theme.media.desktop`  padding: 13% 20px 6% 20px;`}
 `
 
 const FlexContainer = styled.div`
@@ -72,8 +87,12 @@ const StyledContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   color: ${props => props.theme.colors.secondaryColor};
+
+  h3{
+    padding-bottom: 1rem;
+  }
 `
 
 const OrnamentLeft = styled.div`
@@ -119,16 +138,16 @@ const LogoContainer = styled.div`
     props.theme.media.laptop`justify-content: center;   max-width: none`}
 
   svg {
-    padding: 30px;
-    height: calc(100px + 1vw);
-    width: calc(237px + 1vw);
+    padding: ${between(35,86,360,1920)};
+    height: ${between(106,259,360,1920)};
+    width: ${between(237,576,360,1920)};
     background: rgba(41, 37, 91, 0.05);
   }
 
   svg + svg {
-    margin-top: 33px;
+    margin-top: 4%;
     margin-left: auto;
-    ${props => props.theme.media.laptop`margin-left: 20px`}
+    ${props => props.theme.media.laptop`margin-left: 4vw`}
   }
 `
 
