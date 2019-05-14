@@ -1,6 +1,7 @@
 import Youtube from "./youtube_logo.svg"
-import GraphQLWroclaw from "./graphql_wroclaw-logo.svg"
 import Saleor from "./saleor_logo.svg"
+import GraphQLWroclaw from "./graphql_wroclaw_logo.svg"
+import GraphQLWroclawWithBrand from "./graphql_wroclaw_logo_2.svg"
 import Facebook from "./facebook_logo.svg"
 import Meetup from "./meetup_logo.svg"
 import Mirumee from "./mirumee_logo.svg"
@@ -11,6 +12,7 @@ const Logo = {}
 
 Logo.Youtube = Youtube
 Logo.GraphQLWroclaw = GraphQLWroclaw
+Logo.GraphQLWroclawWithBrand = GraphQLWroclawWithBrand
 Logo.Meetup = Meetup
 Logo.Saleor = Saleor
 Logo.Facebook = Facebook

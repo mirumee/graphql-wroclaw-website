@@ -18,7 +18,7 @@ const Nav = styled.nav`
   top: 0;
   left: 0;
   right: 0;
-  margin: 20px 15px;
+  margin: 10px 15px;
 `
 
 Nav.MenuContainer = MenuContainer

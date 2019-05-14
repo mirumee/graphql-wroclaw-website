@@ -27,7 +27,7 @@ const IndexPage = () => (
         query {
           socialBoxImg: file(relativePath: { eq: "graphql_box.png" }) {
             childImageSharp {
-              fluid(maxWidth: 800) {
+              fluid(maxWidth: 1000) {
                 ...GatsbyImageSharpFluid_noBase64
               }
             }
@@ -59,15 +59,15 @@ const IndexPage = () => (
         <>
           <StyledBackground id="start">
             <HeaderContainer>
+              <Box mx={[2,3,3, 4,5]}>              
               <h5>VOL #3 Coming</h5>
               <h1>26 September 2019</h1>
-              <h1>7PM - 9PM</h1>
+              <h3>7PM - 9PM</h3>
               <h5>Barbara, Świdnicka 8B</h5>
-              <StyledButton
-                href="https://www.meetup.com/GraphQL-Wroclaw/events/261828347/"
-                target="_blank"
-                text="Sing up on Meetup"
-              />
+              </Box>
+              <Box mt={[2,2,2,5]} mx={[2,3,3, 4,5]}>              
+                <StyledButton text="Sign up on Meetup"/>
+              </Box>
             </HeaderContainer>
             <FlexContainer>
               <p>Scroll down</p>
@@ -104,7 +104,7 @@ const IndexPage = () => (
               <h4>Marcin Gębala</h4>
               <p>Python Developer</p>
             </Box>
-            <Box width={[1, 1, 1, 3 / 4, 2 / 3]} mx="auto">
+            <Box width={[1, 1, 1, 3 / 4, 2 / 3]} mx="auto" >
               <StyledContainer>
                 <h3>Add more to the power of GraphQL</h3>
                 <StyledButton secondary text="Submit Your Talk" />
@@ -196,7 +196,7 @@ const IndexPage = () => (
             >
               <h2>Organizers</h2>
             </Box>
-            <Box width={[1, 1, 1, 2 / 3]}>
+            <Box width={[1, 1, 1, 1]}>
               <LogoContainer>
                 <Logo.Saleor />
                 <Logo.Mirumee />
