@@ -2,7 +2,6 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 const Slider = styled.input.attrs(() => ({
-  // we can define static props
   type: "range",
 }))`
   -webkit-appearance: none;

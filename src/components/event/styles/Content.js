@@ -9,6 +9,12 @@ const Content = styled.div`
     props.menuOpen ? `30px 30px 40px 30px` : `0px 30px 0px 30px`};
   transition: max-height 0.5s ease-in-out, 0.5s padding ease-in-out,
     0.3s opacity ease-in-out;
+
+    > span {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 1rem;
+    }
 `
 
 export default Content
