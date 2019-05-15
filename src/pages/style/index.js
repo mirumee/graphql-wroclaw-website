@@ -1,6 +1,8 @@
 import styled, { keyframes } from "styled-components"
 import Img from "gatsby-image"
 
+import { between } from '../../styles/styling-helpers' 
+
 
 const animation = (offset) => {
   return keyframes`
@@ -18,11 +20,6 @@ const animation = (offset) => {
 `
 }
 
-const between = (from, to, fromWidth, toWidth) => {
-  const slope =  (to - from) / (toWidth - fromWidth);
-  const base = from - slope * fromWidth;
-  return `calc(${base}px + (100vw * ${slope}))`;
-}
 
 
 const StyledImage = styled(Img)`
@@ -31,6 +28,7 @@ const StyledImage = styled(Img)`
   top: -30px !important;
   right: 0;
   animation: ${animation(4)} 5s ease-in-out infinite;
+  width: 100%;
   div {
     padding-bottom: 0 !important;
   }
@@ -38,7 +36,15 @@ const StyledImage = styled(Img)`
     position: unset !important;
   }
 
-  ${props => props.theme.media.desktop`  animation: ${animation(7)} 5s ease-in-out infinite;`}
+  ${props => props.theme.media.laptop`
+  width: 100%;
+  max-width: 700px;`}
+
+  ${props => props.theme.media.desktop`
+  animation: ${animation(7)} 5s ease-in-out infinite;
+
+  `}
+
 `
 
 const StyledBackground = styled.div`
@@ -61,9 +67,9 @@ const HeaderContainer = styled.div`
   position: relative;
   z-index: 1;
 
-  ${props => props.theme.media.laptop`  padding: 60% 20px 20px 20px;`}
-  ${props => props.theme.media.laptopL`  padding: 40% 20px 20px 20px;`}
-  ${props => props.theme.media.desktop`  padding: 13% 20px 6% 20px;`}
+  ${props => props.theme.media.laptop`  padding: 60% 0 20px 0;`}
+  ${props => props.theme.media.laptopL`  padding: 40% 0 20px 0;`}
+  ${props => props.theme.media.desktop`  padding: 13% 0 6% 0;`}
 `
 
 const FlexContainer = styled.div`
@@ -87,11 +93,12 @@ const StyledContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 2.5rem 2rem;
   color: ${props => props.theme.colors.secondaryColor};
 
   h3{
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
   }
 `
 
@@ -101,15 +108,10 @@ const OrnamentLeft = styled.div`
   padding: 1rem 0 1rem 1rem;
 `
 
-const SpeakersContainer = styled.div`
-  text-align: center;
-  margin-bottom: 2rem;
-`
-
 const DecoratedImg = styled(Img)`
   position: relative;
   overflow: visible !important;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   &:before {
     content: "";
     position: absolute;
@@ -124,9 +126,13 @@ const DecoratedImg = styled(Img)`
   }
 `
 
-const Section = styled.div`
-  margin: 30px 20px 20px 30px;
+const Subheader = styled.h3`
+  font-size: 2.25rem;
+  ${props => props.theme.media.laptop`font-size: 6rem;`}
+  ${props => props.theme.media.desktop`font-size: 6rem;`}
+  ${props => props.theme.media.desktopL`font-size: 9rem;`}
 `
+
 
 const LogoContainer = styled.div`
   display: flex;
@@ -155,11 +161,10 @@ export {
   StyledBackground,
   StyledImage,
   HeaderContainer,
+  Subheader,
   FlexContainer,
   OrnamentLeft,
   DecoratedImg,
-  Section,
   StyledContainer,
-  SpeakersContainer,
   LogoContainer,
 }

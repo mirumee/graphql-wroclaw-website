@@ -8,6 +8,7 @@ import Line from "./Line"
 import Burger from "./Burger"
 import Options from "./Options"
 import Element from "./Element"
+import SiteLogo from "./SiteLogo"
 
 const Nav = styled.nav`
   display: flex;
@@ -24,6 +25,7 @@ const Nav = styled.nav`
 Nav.MenuContainer = MenuContainer
 Nav.LogoContainer = LogoContainer
 Nav.MenuButton = MenuButton
+Nav.SiteLogo = SiteLogo
 Nav.Menu = Menu
 Nav.Line = Line
 Nav.Burger = Burger
