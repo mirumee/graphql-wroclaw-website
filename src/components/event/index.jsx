@@ -48,7 +48,7 @@ class EventConteint extends React.Component {
                 <Logo.Arrow />
               </Event.Button>
               <Event.Content id="content" menuOpen={menuOpen}>
-                <p>Videos</p>
+                <span>Videos</span>
                 <Event.ContentSeparator />
                 <Event.ContentContainer>
                   <div>
