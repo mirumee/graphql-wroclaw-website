@@ -8,16 +8,17 @@ import Mirumee from "./mirumee_logo.svg"
 import PoweredByMirumee from "./poweredbymirumee_logo.svg"
 import Arrow from "./arrow.svg"
 
-const Logo = {}
 
-Logo.Youtube = Youtube
-Logo.GraphQLWroclaw = GraphQLWroclaw
-Logo.GraphQLWroclawWithBrand = GraphQLWroclawWithBrand
-Logo.Meetup = Meetup
-Logo.Saleor = Saleor
-Logo.Facebook = Facebook
-Logo.Mirumee = Mirumee
-Logo.PoweredByMirumee = PoweredByMirumee
-Logo.Arrow = Arrow
+const Logo = {
+    Youtube,
+    GraphQLWroclaw,
+    GraphQLWroclawWithBrand,
+    Meetup,
+    Saleor,
+    Facebook,
+    Mirumee,
+    PoweredByMirumee,
+    Arrow
+}
 
 export default Logo
