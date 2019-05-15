@@ -16,6 +16,7 @@ import {
   FlexContainer,
   OrnamentLeft,
   LogoContainer,
+  Subheader
 } from "../style"
 import Logo from "../icons"
 
@@ -66,7 +67,7 @@ const IndexPage = () => (
               <h5>Barbara, Świdnicka 8B</h5>
               </Box>
               <Box mt={[2,2,2,5]} mx={[2,3,3, 4,5]}>              
-                <StyledButton text="Sign up on Meetup"/>
+                <StyledButton text="Sign up on Meetup" href="https://www.meetup.com/pl-PL/GraphQL-Wroclaw/" target="_blank"/>
               </Box>
             </HeaderContainer>
             <FlexContainer>
@@ -78,7 +79,7 @@ const IndexPage = () => (
           {/*<Flex id="speakers" flexWrap="wrap" mx={[3, 4, 5, 6]}>
             <Box width={[1, 1, 1 / 2]} pl={[0, 5]}>
               <OrnamentLeft>
-                <h2>Speakers</h2>
+                <h2 id="speakers">Speakers</h2>
               </OrnamentLeft>
             </Box>
             <Box
@@ -107,7 +108,7 @@ const IndexPage = () => (
             <Box width={[1, 1, 1, 3 / 4, 2 / 3]} mx="auto" >
               <StyledContainer>
                 <h3>Add more to the power of GraphQL</h3>
-                <StyledButton secondary text="Submit Your Talk" />
+                <StyledButton secondary text="Submit Your Talk" href="http://bit.ly/LT_GraphQL" target="_blank"/>
               </StyledContainer>
             </Box>
             </Flex>*/}
@@ -122,7 +123,7 @@ const IndexPage = () => (
             justifyContent="center"
           >
             <Box mb={4}>
-              <h2>About GraphQL Wrocław</h2>
+              <h2 id="about">About GraphQL Wrocław</h2>
             </Box>
             <Box width={[1, 1, 1, 2 / 3]}>
               <p>
@@ -137,8 +138,7 @@ const IndexPage = () => (
             </Box>
           </Flex>
           <Flex
-            id="past-events"
-            px={[3, 3, 2, 6, 7]}
+            px={[3, 3, 2, 5, 6]}
             my={5}
             justifyContent="space-evenly"
             flexWrap="wrap"
@@ -150,12 +150,12 @@ const IndexPage = () => (
                 textAlign: "center",
               }}
             >
-              <h2>Past Events</h2>
+              <h2 id="past-events">Past Events</h2>
             </Box>
-            <Box width={[1, 1, 2 / 5, 2 / 5, 2 / 5]}>
+            <Box width={[1, 1, 1/2]}>
               <EventContainer />
             </Box>
-            <Box width={[1, 1, 2 / 5, 2 / 5, 2 / 5]}>
+            <Box width={[1, 1, 1/2]}>
               <EventContainer />
             </Box>
           </Flex>
@@ -167,13 +167,13 @@ const IndexPage = () => (
           >
             <Box width={[1, 1, 2 / 3, 1 / 2]} order={[1, 1, 2]} px={3}>
               <OrnamentLeft>
-                <h2>Join our Stream</h2>
+                <h2 id="stream">Join our Stream</h2>
                 <p>
                   The seats for our events are snapped up in quick time. No
                   matter where you are, if you can’t make the event, join the
                   live stream and become part of the community.
                 </p>
-                <StyledButton href="#" text="Watch stream" />
+                <StyledButton text="Watch stream" href="https://www.facebook.com/mirumeelabs/videos/496722830863869/?acontext=%7B%22ref%22%3A52%2C%22source%22%3A1%2C%22action_history%22%3A%22[%7B%5C%22surface%5C%22%3A%5C%22permalink%5C%22%2C%5C%22mechanism%5C%22%3A%5C%22surface%5C%22%2C%5C%22extra_data%5C%22%3A[]%7D]%22%7D&active_tab=discussion" target="_blank"/>
               </OrnamentLeft>
             </Box>
             <Box width={[1, 1, 1 / 3, 1 / 2]} order={[2, 2, 1]}>
@@ -194,7 +194,7 @@ const IndexPage = () => (
                 textAlign: "center",
               }}
             >
-              <h2>Organizers</h2>
+              <h2 id="organisers">Organizers</h2>
             </Box>
             <Box width={[1, 1, 1, 1]}>
               <LogoContainer>

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const StyledButton = styled.a`
-  display: inline-block;
+  appearance: button;
   width: 265px;
   height: 60px;
   top: 10px;
@@ -17,27 +17,15 @@ export const StyledButton = styled.a`
       rgba(255, 255, 255, 0) 0%
     ),
     linear-gradient(${
-<<<<<<< HEAD
       props.secondary
         ? props.theme.colors.secondaryColor
         : props.theme.colors.primaryColor
-    } 25%, rgba(255, 255, 255, 0) 0%),
+    } 19%, rgba(255, 255, 255, 0) 0%),
     linear-gradient(to right, ${
       props.secondary
         ? props.theme.colors.secondaryColor
         : props.theme.colors.primaryColor
-    } 25%, rgba(255, 255, 255, 0) 0%),
-=======
-  props.secondary
-    ? props.theme.colors.secondaryColor
-    : props.theme.colors.primaryColor
-} 19%, rgba(255, 255, 255, 0) 0%),
-    linear-gradient(to right, ${
-  props.secondary
-    ? props.theme.colors.secondaryColor
-    : props.theme.colors.primaryColor
-} 19%, rgba(255, 255, 255, 0) 0%),
->>>>>>> 20a7072... Layout adjustments
+    } 19%, rgba(255, 255, 255, 0) 0%),
     linear-gradient(transparent 50%, rgba(255, 255, 255, 0) 0%)`};
 
   background-position: 100% 100%;
