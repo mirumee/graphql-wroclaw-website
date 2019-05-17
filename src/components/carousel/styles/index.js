@@ -6,8 +6,8 @@ const Slider = styled.input.attrs(() => ({
 }))`
   -webkit-appearance: none;
   margin: 10px 0;
-  width: 100%;
-
+  width: 70%;
+  padding-top: 2rem;
   :focus {
     outline: none;
   }
@@ -39,7 +39,7 @@ const Slider = styled.input.attrs(() => ({
 
 const Photo = styled(Img)`
   width: 100% !important;
-  min-width: 200px;
+  min-width: 180px;
   margin: 1rem;
 `
 

@@ -19,6 +19,24 @@ const animation = offset => {
 `
 }
 
+const PageNotFoundImg = styled(Img)`
+  animation: ${animation(4)} 5s ease-in-out infinite;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+`
+
+const PageNotFound = styled.div`
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10vh 0 20vh 0;
+  text-align: center;
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+`
+
 const StyledImage = styled(Img)`
   position: absolute !important;
   display: block !important;
@@ -94,7 +112,8 @@ const StyledContainer = styled.div`
 
   h3 {
     padding-bottom: 1.5rem;
-    width: 100%;
+    width: 80%;
+    line-height: 1.4;
   }
 `
 
@@ -102,12 +121,16 @@ const OrnamentLeft = styled.div`
   border-left: 8px solid ${props => props.theme.colors.primaryColor};
   margin-bottom: 2rem;
   padding: 1rem 0 1rem 1rem;
+  ${props => props.theme.media.laptopL`  padding: 1rem 0 1rem 2rem;`}
+  ${props => props.theme.media.desktop`  padding: 1rem 0 1rem 3rem;`}
 `
 
 const DecoratedImg = styled(Img)`
   position: relative;
   overflow: visible !important;
+  margin: 0 auto;
   margin-bottom: 1.5rem;
+  max-width: 700px;
   &:before {
     content: "";
     position: absolute;
@@ -135,20 +158,53 @@ const LogoContainer = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
   max-width: 360px;
+  transition: 0.2s all;
   ${props =>
     props.theme.media.laptop`justify-content: center;   max-width: none`}
-
-  svg {
-    padding: ${between(35, 86, 360, 1920)};
-    height: ${between(106, 259, 360, 1920)};
-    width: ${between(237, 576, 360, 1920)};
-    background: rgba(41, 37, 91, 0.05);
+  a {
+    svg {
+      padding: ${between(35, 86, 360, 1920)};
+      height: ${between(106, 259, 360, 1920)};
+      width: ${between(237, 576, 360, 1920)};
+      background: rgba(41, 37, 91, 0.1);
+      transition: 0.4s all;
+      path {
+        fill: ${props => props.theme.colors.primaryColor};
+        transition: 0.4s all;
+      }
+      :hover {
+        background: rgba(41, 37, 91, 0.05);
+        fill: red;
+        transition: 0.4s all;
+        path {
+          fill: ${props => props.theme.colors.mainBrandColor};
+        }
+      }
+    }
   }
-
-  svg + svg {
+  a + a {
     margin-top: 4%;
     margin-left: auto;
     ${props => props.theme.media.laptop`margin-left: 4vw`}
+    svg {
+      padding: ${between(35, 86, 360, 1920)};
+      height: ${between(106, 259, 360, 1920)};
+      width: ${between(237, 576, 360, 1920)};
+      background: rgba(41, 37, 91, 0.1);
+      transition: 0.4s all;
+      path {
+        fill: ${props => props.theme.colors.primaryColor};
+        transition: 0.4s all;
+      }
+      :hover {
+        background: rgba(41, 37, 91, 0.05);
+        fill: red;
+        transition: 0.4s all;
+        path {
+          fill: ${props => props.theme.colors.mainBrandColor};
+        }
+      }
+    }
   }
 `
 
@@ -161,5 +217,7 @@ export {
   OrnamentLeft,
   DecoratedImg,
   StyledContainer,
+  PageNotFoundImg,
+  PageNotFound,
   LogoContainer,
 }

@@ -49,16 +49,34 @@ const Navbar = () => {
   }
 
   return (
-    <Nav>
-      <Nav.SiteLogo>
+    <Nav mx={[3, 4, 5, 6, 6]} mt={[3, 4, 5]}>
+      <Nav.SiteLogo href="https://www.youtube.com/channel/UCg_ptb-U75e7BprLCGS4s1g">
         <Logo.GraphQLWroclaw />
         <Logo.GraphQLWroclawWithBrand />
       </Nav.SiteLogo>
       <Nav.MenuContainer>
         <Nav.LogoContainer menu>
-          <Logo.Youtube />
-          <Logo.Facebook />
-          <Logo.Meetup />
+          <a
+            href="https://www.youtube.com/channel/UCg_ptb-U75e7BprLCGS4s1g"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Logo.Youtube />
+          </a>
+          <a
+            href="https://www.facebook.com/mirumeelabs/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Logo.Facebook />
+          </a>
+          <a
+            href="https://www.meetup.com/GraphQL-Wroclaw/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Logo.Meetup />
+          </a>
         </Nav.LogoContainer>
         <Nav.Menu ref={node}>
           <Nav.MenuButton
@@ -70,7 +88,7 @@ const Navbar = () => {
               <Nav.Line middle menuOpen={menuOpen} />
               <Nav.Line bottom menuOpen={menuOpen} />
             </Nav.Burger>
-            Menu
+            <span>Menu</span>
           </Nav.MenuButton>
           {menuOpen && (
             <Nav.Options>
@@ -84,9 +102,27 @@ const Navbar = () => {
                 </Nav.Element>
               ))}
               <Nav.LogoContainer>
-                <Logo.Youtube />
-                <Logo.Facebook />
-                <Logo.Meetup />
+                <a
+                  href="https://www.youtube.com/channel/UCg_ptb-U75e7BprLCGS4s1g"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Logo.Youtube />
+                </a>
+                <a
+                  href="https://www.facebook.com/mirumeelabs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Logo.Facebook />
+                </a>
+                <a
+                  href="https://www.meetup.com/GraphQL-Wroclaw/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Logo.Meetup />
+                </a>
               </Nav.LogoContainer>
             </Nav.Options>
           )}
