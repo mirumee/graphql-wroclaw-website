@@ -11,13 +11,13 @@ if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]')
 }
 
-const Layout = ({ children }) => (
+const Layout = ({ children, withoutNav }) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
-      <Navbar />
+      {!withoutNav && <Navbar />}
       <main>{children}</main>
-      <Footer />
+      {!withoutNav && <Footer />}
     </>
   </ThemeProvider>
 )
