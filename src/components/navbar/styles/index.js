@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Flex } from "@rebass/grid"
 
 import MenuContainer from "./MenuContainer"
 import LogoContainer from "./LogoContainer"
@@ -10,7 +11,7 @@ import Options from "./Options"
 import Element from "./Element"
 import SiteLogo from "./SiteLogo"
 
-const Nav = styled.nav`
+const Nav = styled(Flex)`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +20,6 @@ const Nav = styled.nav`
   top: 0;
   left: 0;
   right: 0;
-  margin: 10px 15px;
 `
 
 Nav.MenuContainer = MenuContainer
