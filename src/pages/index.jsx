@@ -54,19 +54,40 @@ const IndexPage = () => (
               }
             }
           }
+          allEventsJson {
+            edges {
+              node {
+                title
+                subtitle
+                description
+                image {
+                  childImageSharp {
+                    fluid(quality: 90, maxWidth: 520) {
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+                videos {
+                  title
+                  author
+                  link
+                }
+              }
+            }
+          }
         }
       `}
       render={data => (
         <>
           <StyledBackground id="start">
             <HeaderContainer>
-              <Box mx={[3, 4, 5, 6, 7]}>
+              <Box mx={[3, 4, 4, 6, 7]}>
                 <h5>VOL #3 Coming</h5>
                 <h1>26 September 2019</h1>
                 <Subheader>7PM - 9PM</Subheader>
                 <h5>Barbara, Świdnicka 8B</h5>
               </Box>
-              <Box mt={[2, 2, 2, 5]} mx={[3, 4, 5, 6, 7]}>
+              <Box mt={[2, 2, 4, 5]} mx={[3, 4, 4, 6, 7]}>
                 <StyledButton
                   text="Sign up on Meetup"
                   href="https://www.meetup.com/pl-PL/GraphQL-Wroclaw/"
@@ -81,7 +102,7 @@ const IndexPage = () => (
             <StyledImage fluid={data.socialBoxImg.childImageSharp.fluid} />
           </StyledBackground>
           {/*<Flex flexWrap="wrap" mx={[3, 4, 4, 6, 7]} mb={[3, 4, 5, 6]}>
-            <Box width={[1, 1, 1 / 2]} pl={[0, 5, 7, 9]}>
+            <Box width={[1, 1, 1 / 2]} pl={[0, 0, 7, 9]}>
               <OrnamentLeft>
                 <h2 id="speakers">Speakers</h2>
               </OrnamentLeft>
@@ -149,7 +170,7 @@ const IndexPage = () => (
             </Box>
           </Flex>
           <Flex
-            mx={[3, 4, 5, 6, 7]}
+            mx={[3, 4, 4, 5, 6]}
             my={5}
             justifyContent="space-evenly"
             flexWrap="wrap"
@@ -163,12 +184,11 @@ const IndexPage = () => (
             >
               <h2 id="past-events">Past Events</h2>
             </Box>
-            <Box width={[1, 1, 1 / 2]}>
-              <EventContainer />
-            </Box>
-            <Box width={[1, 1, 1 / 2]}>
-              <EventContainer />
-            </Box>
+            {data.allEventsJson.edges.map(event => (
+              <Box width={[1, 1, 1 / 2]} key={event.node.title}>
+                <EventContainer data={event.node} />
+              </Box>
+            ))}
           </Flex>
           <Flex
             flexWrap="wrap"

@@ -3,7 +3,7 @@ import BackgroundImage from "gatsby-background-image"
 
 const Placeholder = styled(BackgroundImage)`
   width: 100%;
-  padding-top: 40%;
+  padding-top: 50%;
   display: flex;
   align-items: flex-start;
 `

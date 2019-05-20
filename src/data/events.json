@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Graphql Wrocław #1",
+    "subtitle": "REST is history",
+    "description": "",
+    "image": "./images/event_1.jpg",
+    "videos": [
+      {
+        "title": "Why You Should Migrate to GraphQL",
+        "author": "Marcin Gębala",
+        "link": "https://www.youtube.com/watch?v=w-p2jsA474E"
+      },
+      {
+        "title": "Ariadne: Familiar GraphQL in Python",
+        "author": "Rafał Pitoń",
+        "link": "https://www.youtube.com/watch?v=Nk4C78i51VM"
+      }
+    ]
+  },
+  {
+    "title": "Graphql Wrocław #2",
+    "subtitle": "",
+    "description": "",
+    "image": "./images/event_2.jpg",
+    "videos": [
+      {
+        "title": "Serverless GraphQL, czyli AppSync w pigułce",
+        "author": "Marcin Sodkiewicz",
+        "link": "https://www.youtube.com/watch?v=FrSjDKmFgI0&feature=youtu.be"
+      },
+      {
+        "title": "Masz schemę? Masz formularz. Poznaj uniforms!",
+        "author": "Radosław Miernik",
+        "link": "https://www.youtube.com/watch?v=zexG50Z8kRE"
+      },
+      {
+        "title": "Schema-First vs Code-first approach in GraphQL API development",
+        "author": "Jakub Draganek",
+        "link": "https://www.youtube.com/watch?v=Vmv0yC-7aKY"
+      }
+    ]
+  }
+]
