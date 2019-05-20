@@ -7,7 +7,7 @@ import ContentSeparator from "./ContentSeparator"
 import Title from "./Title"
 import ContentContainer from "./ContentContainer"
 
-import { between } from '../../../styles/styling-helpers' 
+import { between } from "../../../styles/styling-helpers"
 
 const Event = styled.div`
 
@@ -19,7 +19,7 @@ const Event = styled.div`
 
   ${props => props.theme.media.laptop`max-width: 345px;`}
   ${props => props.theme.media.laptopL`max-width: 400px;`}
-  ${props => props.theme.media.desktop`max-width: 500px;`}
+  ${props => props.theme.media.desktop`max-width: 460px;`}
   ${props => props.theme.media.desktop`max-width: unset;`}
 `
 
@@ -30,4 +30,4 @@ Event.ContentSeparator = ContentSeparator
 Event.Title = Title
 Event.ContentContainer = ContentContainer
 
-export default Event;
+export default Event
