@@ -49,7 +49,7 @@ const Navbar = () => {
   }
 
   return (
-    <Nav mx={[3, 4, 5, 6, 6]} mt={[3, 4, 5]}>
+    <Nav mx={[3, 4, 4, 6, 6]} mt={[3, 3, 4]}>
       <Nav.SiteLogo href="https://www.youtube.com/channel/UCg_ptb-U75e7BprLCGS4s1g">
         <Logo.GraphQLWroclaw />
         <Logo.GraphQLWroclawWithBrand />

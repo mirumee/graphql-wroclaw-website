@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const Options = styled.div`
   color: ${props => props.theme.colors.secondaryColor};
@@ -7,10 +7,11 @@ const Options = styled.div`
   right: 0;
   width: 272px;
   z-index: 10;
-  padding: 40px 20px;
+  padding: 40px 20px 40px 20px;
   transition: 0.2s all;
 
-  ${props => props.theme.media.laptop`width: 156px;`};
-`;
+  ${props => props.theme.media.laptop`width: 156px;
+    padding: 40px 20px 20px 20px;`};
+`
 
-export default Options;
+export default Options

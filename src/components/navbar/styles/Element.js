@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 import { Link } from "gatsby"
 
 const Element = styled(Link)`
@@ -8,6 +8,6 @@ const Element = styled(Link)`
   color: inherit;
   text-decoration: inherit;
   display: block;
-`;
+`
 
-export default Element;
+export default Element

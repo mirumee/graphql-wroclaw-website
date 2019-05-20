@@ -52,8 +52,9 @@ const StyledImage = styled(Img)`
   }
 
   ${props => props.theme.media.laptop`
+  top: -90px !important;
   width: 100%;
-  max-width: 700px;`}
+  max-width: 900px;`}
 
   ${props => props.theme.media.desktop`
   animation: ${animation(7)} 5s ease-in-out infinite;
@@ -63,6 +64,7 @@ const StyledImage = styled(Img)`
 
 const StyledBackground = styled.div`
   position: relative;
+  margin-bottom: 3rem;
   background: linear-gradient(
     171deg,
     rgba(228, 228, 228, 0) -3%,
@@ -80,6 +82,12 @@ const HeaderContainer = styled.div`
   text-transform: uppercase;
   position: relative;
   z-index: 1;
+
+  
+  h1,h3,h5 {
+    line-height: 1;
+    margin-bottom: .5rem;
+  }
 
   ${props => props.theme.media.laptop`  padding: 60% 0 20px 0;`}
   ${props => props.theme.media.laptopL`  padding: 40% 0 20px 0;`}
@@ -107,7 +115,7 @@ const StyledContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 2rem 3rem 2rem;
   color: ${props => props.theme.colors.secondaryColor};
 
   h3 {
@@ -120,8 +128,7 @@ const StyledContainer = styled.div`
 const OrnamentLeft = styled.div`
   border-left: 8px solid ${props => props.theme.colors.primaryColor};
   margin-bottom: 2rem;
-  padding: 1rem 0 1rem 1rem;
-  ${props => props.theme.media.laptopL`  padding: 1rem 0 1rem 2rem;`}
+  padding: 1rem 0 1rem 2rem;
   ${props => props.theme.media.desktop`  padding: 1rem 0 1rem 3rem;`}
 `
 
