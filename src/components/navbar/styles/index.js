@@ -16,10 +16,18 @@ const Nav = styled(Flex)`
   justify-content: space-between;
   align-items: center;
   z-index: 2;
-  position: absolute;
+  position: fixed;
   top: 0;
+  transition: 0.3s all;
   left: 0;
   right: 0;
+  background-color: ${props =>
+    props.onTop ? "transparent" : `rgba(255, 255, 255, 0.98)`};
+  ${props =>
+    props.onTop ||
+    `padding-top: 5px !important;
+  padding-bottom: 5px !important;`};
+  z-index: 100;
 `
 
 Nav.MenuContainer = MenuContainer

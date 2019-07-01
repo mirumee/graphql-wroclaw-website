@@ -1,110 +1,130 @@
-import React from "react"
+import React, { useState, useRef, useEffect } from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Slider, { Photo } from "./styles"
+// import Carousel from "@brainhubeu/react-carousel"
+// import "@brainhubeu/react-carousel/lib/style.css"
 
-import Carousel from "@brainhubeu/react-carousel"
-import "@brainhubeu/react-carousel/lib/style.css"
+import Slider, { Photo, Carousel, CarouselWrapper } from "./styles"
 
-class CarouselContainer extends React.Component {
-  state = {
-    value: "0",
+const CarouselContainer = () => {
+  const [currentValue, setValue] = useState(0)
+  const [carouselWidth, setWidth] = useState(window.innerWidth)
+
+  const handleChange = e => {
+    const { value } = e.target
+    setValue(value)
   }
 
-  handleChange = e => this.setState({ value: e.target ? e.target.value : e })
+  const carouselRef = useRef()
 
-  render() {
-    return (
-      <StaticQuery
-        query={graphql`
-          query {
-            eventPhotoOne: file(relativePath: { eq: "event_photo_1.jpeg" }) {
-              childImageSharp {
-                fluid(maxWidth: 580) {
-                  ...GatsbyImageSharpFluid_noBase64
-                }
-              }
-            }
-            eventPhotoTwo: file(relativePath: { eq: "event_photo_2.jpeg" }) {
-              childImageSharp {
-                fluid(maxWidth: 580) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            eventPhotoThree: file(relativePath: { eq: "event_photo_3.jpeg" }) {
-              childImageSharp {
-                fluid(maxWidth: 580) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            eventPhotoFour: file(relativePath: { eq: "event_photo_4.jpeg" }) {
-              childImageSharp {
-                fluid(maxWidth: 580) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            eventPhotoFive: file(relativePath: { eq: "event_photo_5.jpeg" }) {
-              childImageSharp {
-                fluid(maxWidth: 580) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            eventPhotoSix: file(relativePath: { eq: "event_photo_6.jpeg" }) {
-              childImageSharp {
-                fluid(maxWidth: 580) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            eventPhotoSeven: file(relativePath: { eq: "event_photo_7.jpeg" }) {
-              childImageSharp {
-                fluid(maxWidth: 580) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            eventPhotoEight: file(relativePath: { eq: "event_photo_8.jpeg" }) {
-              childImageSharp {
-                fluid(maxWidth: 580) {
-                  ...GatsbyImageSharpFluid
-                }
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
+
+  const handleResize = e => {
+    const offset =
+      carouselRef.current.scrollWidth - carouselRef.current.offsetWidth
+    setWidth(offset)
+  }
+
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          eventPhotoOne: file(relativePath: { eq: "event_photo_1.jpeg" }) {
+            childImageSharp {
+              fluid(maxWidth: 580) {
+                ...GatsbyImageSharpFluid_noBase64
               }
             }
           }
-        `}
-        render={data => (
-          <>
+          eventPhotoTwo: file(relativePath: { eq: "event_photo_2.jpeg" }) {
+            childImageSharp {
+              fluid(maxWidth: 580) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          eventPhotoThree: file(relativePath: { eq: "event_photo_3.jpeg" }) {
+            childImageSharp {
+              fluid(maxWidth: 580) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          eventPhotoFour: file(relativePath: { eq: "event_photo_4.jpeg" }) {
+            childImageSharp {
+              fluid(maxWidth: 580) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          eventPhotoFive: file(relativePath: { eq: "event_photo_5.jpeg" }) {
+            childImageSharp {
+              fluid(maxWidth: 580) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          eventPhotoSix: file(relativePath: { eq: "event_photo_6.jpeg" }) {
+            childImageSharp {
+              fluid(maxWidth: 580) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          eventPhotoSeven: file(relativePath: { eq: "event_photo_7.jpeg" }) {
+            childImageSharp {
+              fluid(maxWidth: 580) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      `}
+      render={data => (
+        <>
+          <CarouselWrapper>
             <Carousel
-              value={this.state.value}
-              slidesPerPage={3}
-              slidesPerScroll={1}
-              onChange={this.onChange}
-              addArrowClickHandler={false}
-              draggable={false}
+              sliderValue={currentValue}
+              carouselWidth={carouselWidth}
+              ref={carouselRef}
             >
-              <Photo fluid={data.eventPhotoOne.childImageSharp.fluid} />
               <Photo fluid={data.eventPhotoTwo.childImageSharp.fluid} />
               <Photo fluid={data.eventPhotoThree.childImageSharp.fluid} />
               <Photo fluid={data.eventPhotoFour.childImageSharp.fluid} />
               <Photo fluid={data.eventPhotoFive.childImageSharp.fluid} />
-              {/* <Photo fluid={data.eventPhotoSix.childImageSharp.fluid} />
+              <Photo fluid={data.eventPhotoSix.childImageSharp.fluid} />
               <Photo fluid={data.eventPhotoSeven.childImageSharp.fluid} />
-              <Photo fluid={data.eventPhotoEight.childImageSharp.fluid} /> */}
             </Carousel>
-            <Slider
-              min="0"
-              max="2"
-              value={this.state.value}
-              onChange={e => this.handleChange(e)}
-            />
-          </>
-        )}
-      />
-    )
-  }
+          </CarouselWrapper>
+          <Slider
+            min="1"
+            max="100"
+            value={currentValue}
+            onChange={handleChange}
+          />
+        </>
+      )}
+    />
+  )
 }
 
 export default CarouselContainer
+
+{
+  /* <>
+<Carousel
+  value={currentValue}
+  slidesPerPage={carouselWidth()}
+  slidesPerScroll={1}
+  addArrowClickHandler={false}
+  draggable={false}
+>
+
+</Carousel>
+
+</> */
+}
