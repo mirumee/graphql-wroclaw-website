@@ -1,9 +1,9 @@
 [
   {
     "title": "Graphql Wrocław #1",
-    "subtitle": "REST is history",
     "description": "",
     "image": "./images/event_1.jpg",
+    "date": "29.01.2019",
     "videos": [
       {
         "title": "Why You Should Migrate to GraphQL",
@@ -19,9 +19,9 @@
   },
   {
     "title": "Graphql Wrocław #2",
-    "subtitle": "",
     "description": "",
     "image": "./images/event_2.jpg",
+    "date": "07.05.2019",
     "videos": [
       {
         "title": "Serverless GraphQL, czyli AppSync w pigułce",

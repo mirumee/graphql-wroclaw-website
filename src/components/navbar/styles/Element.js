@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link } from "react-scroll"
 
 const Element = styled(Link)`
   margin-bottom: 22px;
@@ -10,6 +10,7 @@ const Element = styled(Link)`
   color: inherit;
   text-decoration: inherit;
   display: block;
+  cursor: pointer;
 `
 
 export default Element

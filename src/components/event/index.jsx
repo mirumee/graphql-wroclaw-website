@@ -10,12 +10,11 @@ const EventConteint = props => {
   const imageData = data.image.childImageSharp.fluid
   return (
     <Event>
-      {console.log(data)}
       <Event.Placeholder fluid={imageData}>
         <Event.Title>
           {data.title}
           <br />
-          {data.subtitle}
+          {data.date}
         </Event.Title>
       </Event.Placeholder>
       <Event.Button onClick={() => setInOpen(!isOpen)} menuOpen={isOpen}>

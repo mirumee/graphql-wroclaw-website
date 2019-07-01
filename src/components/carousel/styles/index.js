@@ -5,7 +5,7 @@ const Slider = styled.input.attrs(() => ({
   type: "range",
 }))`
   -webkit-appearance: none;
-  margin: 10px 0;
+  margin: 2% 0 10px 0;
   width: 70%;
   padding-top: 2rem;
   :focus {
@@ -34,15 +34,35 @@ const Slider = styled.input.attrs(() => ({
     background-position: 5%;
     background-size: 30px 4px;
     background-repeat: repeat-x;
+    transition: 0.2s all;
+    :hover {
+      background: rgba(41, 35, 92, 0.2);
+    }
+    :active {
+      background: rgba(41, 35, 92, 0.2);
+    }
   }
 `
 
 const Photo = styled(Img)`
   width: 100% !important;
-  min-width: 180px;
+  min-width: 160px;
   margin: 1rem;
+
+  ${props => props.theme.media.desktop`  max-width: 410px;`}
+`
+
+const Carousel = styled.div`
+  display: flex;
+  overflow: hidden;
+  overflow: visible;
+  margin-left: ${props =>
+    `calc(-${props.carouselWidth}px * (${props.sliderValue} * 0.01 ))`};
+`
+const CarouselWrapper = styled.div`
+  height: 200px;
 `
 
 export default Slider
 
-export { Photo }
+export { Photo, Carousel, CarouselWrapper }

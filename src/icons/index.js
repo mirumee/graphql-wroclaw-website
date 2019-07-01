@@ -7,18 +7,19 @@ import Meetup from "./meetup_logo.svg"
 import Mirumee from "./mirumee_logo.svg"
 import PoweredByMirumee from "./poweredbymirumee_logo.svg"
 import Arrow from "./arrow.svg"
-
+import Twitter from "./twitter_logo.svg"
 
 const Logo = {
-    Youtube,
-    GraphQLWroclaw,
-    GraphQLWroclawWithBrand,
-    Meetup,
-    Saleor,
-    Facebook,
-    Mirumee,
-    PoweredByMirumee,
-    Arrow
+  Youtube,
+  GraphQLWroclaw,
+  GraphQLWroclawWithBrand,
+  Meetup,
+  Saleor,
+  Facebook,
+  Mirumee,
+  PoweredByMirumee,
+  Arrow,
+  Twitter,
 }
 
 export default Logo
