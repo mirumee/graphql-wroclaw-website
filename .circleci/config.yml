@@ -10,7 +10,6 @@ jobs:
       - run:
           name: Build stage
           command: |
-            cd website
             npm install
             npm run build
       - run:
