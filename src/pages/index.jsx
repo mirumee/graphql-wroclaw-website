@@ -17,7 +17,7 @@ import {
   DecoratedImg,
   StyledContainer,
   LogoContainer,
-} from "./style"
+} from "../style"
 import Logo from "../icons"
 
 const IndexPage = () => (
