@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const StyledButton = styled.a`
+  display: inline-block;
   width: 265px;
   height: 60px;
   top: 10px;
@@ -44,6 +45,7 @@ export const StyledButton = styled.a`
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    font-weight: bold;
     border: 3px solid
       ${props =>
         props.secondary

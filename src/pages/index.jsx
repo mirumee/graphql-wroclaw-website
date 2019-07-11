@@ -164,7 +164,7 @@ const IndexPage = () => (
                   matter where you are, if you can’t make the event, join the
                   live stream and become part of the community.
                 </p>
-                <StyledButton text="Watch stream" />
+                <StyledButton href="#" text="Watch stream" />
               </OrnamentLeft>
             </Box>
             <Box width={[1, 1, 1 / 3, 1 / 2]} order={[2, 2, 1]}>
