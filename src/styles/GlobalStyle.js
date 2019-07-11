@@ -254,6 +254,15 @@ h1 {
   @media (max-width: 1439px) {
     font-size: 8rem;
   }
+  @media (max-width: 1240px) {
+    font-size: 6rem;
+  }
+  @media (max-width: 1024px) {
+    font-size: 5rem;
+  }
+  @media (max-width: 830px) {
+    font-size: 4rem;
+  }
   @media (max-width: 767px) {
     font-size: 3rem;
   }
