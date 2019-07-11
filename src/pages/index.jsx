@@ -14,8 +14,6 @@ import {
   StyledImage,
   FlexContainer,
   OrnamentLeft,
-  DecoratedImg,
-  StyledContainer,
   LogoContainer,
 } from "../style"
 import Logo from "../icons"
@@ -71,7 +69,7 @@ const IndexPage = () => (
             </FlexContainer>
             <StyledImage fluid={data.socialBoxImg.childImageSharp.fluid} />
           </StyledBackground>
-          <Flex flexWrap="wrap" mx={[3, 4, 5, 6]}>
+          {/*<Flex flexWrap="wrap" mx={[3, 4, 5, 6]}>
             <Box width={[1, 1, 1 / 2]} pl={[0, 5]}>
               <OrnamentLeft>
                 <h2>Speakers</h2>
@@ -106,7 +104,7 @@ const IndexPage = () => (
                 <StyledButton secondary text="Submit Your Talk" />
               </StyledContainer>
             </Box>
-          </Flex>
+            </Flex>*/}
           <Flex
             px={3}
             my={5}

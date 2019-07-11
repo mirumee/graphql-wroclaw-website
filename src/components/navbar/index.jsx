@@ -10,7 +10,7 @@ class Navbar extends React.Component {
 
   menuLinks = [
     `Start`,
-    `Speakers`,
+    // `Speakers`,
     `About`,
     `Past Events`,
     `Stream`,
