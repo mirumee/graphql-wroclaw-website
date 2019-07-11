@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.a`
   width: 265px;
   height: 60px;
   top: 10px;
@@ -16,15 +16,15 @@ export const StyledButton = styled.button`
       rgba(255, 255, 255, 0) 0%
     ),
     linear-gradient(${
-  props.secondary
-    ? props.theme.colors.secondaryColor
-    : props.theme.colors.primaryColor
-} 25%, rgba(255, 255, 255, 0) 0%),
+      props.secondary
+        ? props.theme.colors.secondaryColor
+        : props.theme.colors.primaryColor
+    } 25%, rgba(255, 255, 255, 0) 0%),
     linear-gradient(to right, ${
-  props.secondary
-    ? props.theme.colors.secondaryColor
-    : props.theme.colors.primaryColor
-} 25%, rgba(255, 255, 255, 0) 0%),
+      props.secondary
+        ? props.theme.colors.secondaryColor
+        : props.theme.colors.primaryColor
+    } 25%, rgba(255, 255, 255, 0) 0%),
     linear-gradient(transparent 50%, rgba(255, 255, 255, 0) 0%)`};
 
   background-position: 100% 100%;
@@ -45,13 +45,15 @@ export const StyledButton = styled.button`
     align-items: center;
     text-transform: uppercase;
     border: 3px solid
-      ${props => (props.secondary
+      ${props =>
+        props.secondary
           ? props.theme.colors.secondaryColor
-          : props.theme.colors.primaryColor)};
+          : props.theme.colors.primaryColor};
 
-    color: ${props => (props.secondary
+    color: ${props =>
+      props.secondary
         ? props.theme.colors.secondaryColor
-        : props.theme.colors.primaryColor)};
+        : props.theme.colors.primaryColor};
     cursor: pointer;
     background-color: transparent;
   }
@@ -66,12 +68,14 @@ export const StyledButton = styled.button`
   &:hover {
     &:after {
       transition: 0.2s all;
-      background: ${props => (props.secondary
+      background: ${props =>
+        props.secondary
           ? props.theme.colors.secondaryColor
-          : props.theme.colors.primaryColor)};
-      color: ${props => (props.secondary
+          : props.theme.colors.primaryColor};
+      color: ${props =>
+        props.secondary
           ? props.theme.colors.primaryColor
-          : props.theme.colors.secondaryColor)};
+          : props.theme.colors.secondaryColor};
     }
   }
   &:focus {
@@ -84,13 +88,15 @@ export const StyledButton = styled.button`
     height: 3px;
     bottom: 0;
     right: 0;
-    background: ${props => (props.secondary
+    background: ${props =>
+      props.secondary
         ? props.theme.colors.secondaryColor
-        : props.theme.colors.primaryColor)};
-    color: ${props => (props.secondary
+        : props.theme.colors.primaryColor};
+    color: ${props =>
+      props.secondary
         ? props.theme.colors.secondaryColor
-        : props.theme.colors.primaryColor)};
+        : props.theme.colors.primaryColor};
   }
-`;
+`
 
-export default { StyledButton };
+export default { StyledButton }
