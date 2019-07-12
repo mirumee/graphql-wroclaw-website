@@ -9,12 +9,12 @@ class Navbar extends React.Component {
   }
 
   menuLinks = [
-    `Start`,
-    // `Speakers`,
-    `About`,
-    `Past Events`,
-    `Stream`,
-    `Organisers`,
+    { href: "#start", text: `Start` },
+    // { href: "#speakers", text: `Speakers` },
+    { href: "#about", text: `About` },
+    { href: "#past-events", text: `Past Events` },
+    { href: "#stream", text: `Stream` },
+    { href: "#organizers", text: `Organizers` },
   ]
 
   toggleList() {
@@ -51,8 +51,10 @@ class Navbar extends React.Component {
             </Nav.MenuButton>
             {menuOpen && (
               <Nav.Options>
-                {this.menuLinks.map(item => (
-                  <Nav.Element key={item}>{item}</Nav.Element>
+                {this.menuLinks.map(({ href, text }) => (
+                  <Nav.Element href={href} key={href}>
+                    {text}
+                  </Nav.Element>
                 ))}
                 <Nav.LogoContainer>
                   <Logo.Youtube />

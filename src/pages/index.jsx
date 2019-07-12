@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import { Flex, Box } from "@rebass/grid"
 
 import EventContainer from "../components/event"
+import SEO from "../components/seo"
 import { StyledButton } from "../components/shared/button"
 import Rectangle from "../components/shared/shapes"
 import Layout from "../components/layout"
@@ -20,6 +21,7 @@ import Logo from "../icons"
 
 const IndexPage = () => (
   <Layout>
+    <SEO />
     <StaticQuery
       query={graphql`
         query {
@@ -55,7 +57,7 @@ const IndexPage = () => (
       `}
       render={data => (
         <>
-          <StyledBackground>
+          <StyledBackground id="start">
             <HeaderContainer>
               <h5>VOL #3 Coming</h5>
               <h1>26 September 2019</h1>
@@ -73,7 +75,7 @@ const IndexPage = () => (
             </FlexContainer>
             <StyledImage fluid={data.socialBoxImg.childImageSharp.fluid} />
           </StyledBackground>
-          {/*<Flex flexWrap="wrap" mx={[3, 4, 5, 6]}>
+          {/*<Flex id="speakers" flexWrap="wrap" mx={[3, 4, 5, 6]}>
             <Box width={[1, 1, 1 / 2]} pl={[0, 5]}>
               <OrnamentLeft>
                 <h2>Speakers</h2>
@@ -110,6 +112,7 @@ const IndexPage = () => (
             </Box>
             </Flex>*/}
           <Flex
+            id="about"
             px={3}
             my={5}
             flexWrap="wrap"
@@ -134,6 +137,7 @@ const IndexPage = () => (
             </Box>
           </Flex>
           <Flex
+            id="past-events"
             px={[3, 3, 2, 6, 7]}
             my={5}
             justifyContent="space-evenly"
@@ -155,7 +159,12 @@ const IndexPage = () => (
               <EventContainer />
             </Box>
           </Flex>
-          <Flex flexWrap="wrap" px={[3, 4, 5, 6]} alignItems="center">
+          <Flex
+            id="stream"
+            flexWrap="wrap"
+            px={[3, 4, 5, 6]}
+            alignItems="center"
+          >
             <Box width={[1, 1, 2 / 3, 1 / 2]} order={[1, 1, 2]} px={3}>
               <OrnamentLeft>
                 <h2>Join our Stream</h2>
@@ -171,7 +180,13 @@ const IndexPage = () => (
               <Img fluid={data.socialBox.childImageSharp.fluid} />
             </Box>
           </Flex>
-          <Flex mx={3} my={4} flexWrap="wrap" justifyContent="center">
+          <Flex
+            id="organizers"
+            mx={3}
+            my={4}
+            flexWrap="wrap"
+            justifyContent="center"
+          >
             <Box
               mb={4}
               width={1}
