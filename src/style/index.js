@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components"
 import Img from "gatsby-image"
 
-import { between } from "../../styles/styling-helpers"
+import { between } from "../styles/styling-helpers"
 
 const animation = offset => {
   return keyframes`

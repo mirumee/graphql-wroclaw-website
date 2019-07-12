@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
-import { StyledBackground, PageNotFoundImg, PageNotFound } from "./style"
+import { StyledBackground, PageNotFoundImg, PageNotFound } from "../style"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 

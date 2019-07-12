@@ -8,10 +8,10 @@ const menuLinks = [
     name: "Start",
     anchor: "start",
   },
-  {
+  /*{
     name: "Speakers",
     anchor: "speakers",
-  },
+  },*/
   {
     name: "About",
     anchor: "about",

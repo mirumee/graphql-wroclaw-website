@@ -23,6 +23,7 @@ import Logo from "../icons"
 const IndexPage = () => {
   return (
     <Layout>
+      <SEO />
       <StaticQuery
         query={graphql`
           query {
@@ -145,7 +146,7 @@ const IndexPage = () => {
                   />
                 </StyledContainer>
               </Box>
-            </Flex>*/ą}
+            </Flex>*/}
             <Flex
               mx={[3, 3, 4, 6, 7]}
               mb={[3, 4, 5, 6]}

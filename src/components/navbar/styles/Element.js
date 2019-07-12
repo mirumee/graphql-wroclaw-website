@@ -11,6 +11,10 @@ const Element = styled(Link)`
   text-decoration: inherit;
   display: block;
   cursor: pointer;
+  &:active,
+  &:hover {
+    color: ${props => props.theme.colors.mainBrandColor};
+  }
 `
 
 export default Element
