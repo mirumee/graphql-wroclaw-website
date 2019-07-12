@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `GrapgQL Wroclaw`,
+    title: `GraphQL Wroclaw`,
     description: `Events about GraphQL`,
     author: `@mirumee`,
   },

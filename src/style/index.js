@@ -43,12 +43,15 @@ const StyledBackground = styled.div`
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 70% 20px 20px 20px;
+  padding: 50% 20px 20px 20px;
   font-weight: bold;
   width: 100%;
   text-transform: uppercase;
   position: relative;
   z-index: 1;
+  @media (min-width: 768px) {
+    padding-top: 200px;
+  }
 `
 
 const FlexContainer = styled.div`
