@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const StyledButton = styled.a`
-  appearance: button;
+  display: inline-block;
   width: 265px;
   height: 60px;
   top: 10px;
@@ -58,7 +58,7 @@ export const StyledButton = styled.a`
         ? props.theme.colors.secondaryColor
         : props.theme.colors.primaryColor};
     cursor: pointer;
-    background-color: transparent;
+    background: transparent;
   }
 
   &:active {
