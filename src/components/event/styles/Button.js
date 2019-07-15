@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const Button = styled.div`
   width: 36px;
@@ -18,6 +18,11 @@ const Button = styled.div`
     transition: 0.5s all ease-in-out;
     transform: ${props => (props.menuOpen ? `rotate(180deg)` : `rotate(0deg)`)};
   }
-`;
 
-export default Button;
+  &active,
+  &:hover {
+    background: ${props => props.theme.colors.primaryColor};
+  }
+`
+
+export default Button
