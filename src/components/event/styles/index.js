@@ -10,7 +10,7 @@ import ContentContainer from "./ContentContainer"
 import { between } from "../../../styles/styling-helpers"
 
 const Event = styled.div`
-
+  background-color: rgba(41, 37, 91, 0.05);
   margin: 0 auto 50px auto;
   position: relative;
   display: flex;
