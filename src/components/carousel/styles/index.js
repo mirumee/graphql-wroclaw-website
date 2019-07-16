@@ -42,6 +42,7 @@ const Slider = styled.input.attrs(() => ({
       background: rgba(41, 35, 92, 0.2);
     }
   }
+  ${props => props.theme.media.desktop`display: none;`}
 `
 
 const Photo = styled(Img)`
@@ -54,13 +55,12 @@ const Photo = styled(Img)`
 
 const Carousel = styled.div`
   display: flex;
-  overflow: hidden;
   overflow: visible;
-  margin-left: ${props =>
-    `calc(-${props.carouselWidth}px * (${props.sliderValue} * 0.01 ))`};
+  position: relative;
+  right: ${props => `${props.sliderValue * props.carouselWidth * 0.01}px;`};
 `
 const CarouselWrapper = styled.div`
-  height: 200px;
+  overflow: hidden;
 `
 
 export default Slider

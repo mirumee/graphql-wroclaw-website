@@ -178,20 +178,21 @@ const IndexPage = () => {
               }}
               justifyContent="center"
             >
-              <Box mb={4}>
+              <Box width={1} mb={4}>
                 <h2 id="about">About GraphQL Wrocław</h2>
               </Box>
               <Box width={[1, 1, 4 / 6, 2 / 3]} mb={[3, 4, 5, 6]}>
                 <p>
                   Knowledge: Cubed. GraphQL Wroclaw is a community of with a
-                  shared love for new, powerful technology. We believe that
-                  through sharing and engagement, we can make Wroclaw a local
-                  and global leader in one of the world’s fastest growing
-                  languages.
+                  shared love for new, powerful technology.
+                  <br/>
+                  We believe that through sharing and engagement, we can make
+                  Wroclaw a local and global leader in one of the world’s
+                  fastest growing languages.
                 </p>
               </Box>
               <Box width={1}>
-                {false && <CarouselContainer />}
+                <CarouselContainer />
               </Box>
             </Flex>
             <Flex
