@@ -12,7 +12,7 @@ body {
   font-family: 'Space Grotesk';
 }
 
-  html {
+html {
   font-family: "Space Grotesk";
   font-size: 16px;
 }

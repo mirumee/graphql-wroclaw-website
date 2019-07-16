@@ -163,7 +163,7 @@ const LogoContainer = styled.div`
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   max-width: 360px;
   transition: 0.2s all;
   ${props =>
@@ -191,7 +191,7 @@ const LogoContainer = styled.div`
   }
   a + a {
     margin-top: 4%;
-    margin-left: auto;
+    ${props => props.theme.media.tablet`margin-top: 0`}
     ${props => props.theme.media.laptop`margin-left: 4vw`}
     svg {
       padding: ${between(35, 86, 360, 1920)};

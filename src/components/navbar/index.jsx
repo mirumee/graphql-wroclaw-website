@@ -13,6 +13,10 @@ const menuLinks = [
     anchor: "speakers",
   },*/
   {
+    name: "Submit talk",
+    anchor: "submit-talk",
+  },
+  {
     name: "About",
     anchor: "about",
   },

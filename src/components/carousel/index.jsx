@@ -6,6 +6,8 @@ import { StaticQuery, graphql } from "gatsby"
 import Slider, { Photo, Carousel, CarouselWrapper } from "./styles"
 
 const CarouselContainer = () => {
+  if (typeof window === "undefined") return null;
+
   const [currentValue, setValue] = useState(0)
   const [carouselWidth, setWidth] = useState(window.innerWidth)
 

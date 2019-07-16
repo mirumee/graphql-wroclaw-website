@@ -9,6 +9,7 @@ import { StyledButton } from "../components/shared/button"
 import Rectangle from "../components/shared/shapes"
 import Layout from "../components/layout"
 import CarouselContainer from "../components/carousel"
+import SubmitTalk from "../components/submittalk"
 import {
   HeaderContainer,
   StyledBackground,
@@ -140,13 +141,34 @@ const IndexPage = () => {
                   <h3>Add more to the power of GraphQL</h3>
                   <StyledButton
                     secondary
-                    text="Submit Your Talk"
+                    text="Submit your talk"
                     href="http://bit.ly/LT_GraphQL"
                     target="_blank"
                   />
                 </StyledContainer>
               </Box>
             </Flex>*/}
+            <Flex
+              mx={[3, 3, 4, 6, 7]}
+              mb={[3, 4, 5, 6]}
+              flexWrap="wrap"
+              css={{
+                textAlign: "center",
+              }}
+              justifyContent="center"
+            >
+              <Box width={[1, 1, 1, 2 / 6]} mb={[4, 5, 6]}>
+                <SubmitTalk>
+                  <h2 id="submit-talk">Add more to the power of GraphQL</h2>
+                  <StyledButton
+                    text="Submit your talk"
+                    href="https://mirumee.typeform.com/to/gLePwX"
+                    secondary={true}
+                    target="_blank"
+                  />
+                </SubmitTalk>
+              </Box>
+            </Flex>
             <Flex
               mx={[3, 3, 4, 6, 7]}
               mb={[3, 4, 5, 6]}
@@ -169,7 +191,7 @@ const IndexPage = () => {
                 </p>
               </Box>
               <Box width={1}>
-                <CarouselContainer />
+                {false && <CarouselContainer />}
               </Box>
             </Flex>
             <Flex
@@ -192,7 +214,7 @@ const IndexPage = () => {
                   <EventContainer data={event.node} />
                 </Box>
               ))}
-            </Flex>
+              </Flex>
             <Flex
               flexWrap="wrap"
               mx={[3, 3, 4, 6, 7]}
@@ -205,8 +227,8 @@ const IndexPage = () => {
                   <h2>Join our Stream</h2>
                   <p>
                     The seats for our events are snapped up in quick time. No
-                    matter where you are, if you can’t make the event, join the
-                    live stream and become part of the community.
+                    matter where you are, if you can’t make the event, join
+                    the live stream and become part of the community.
                   </p>
                   <StyledButton
                     text="Watch stream"
