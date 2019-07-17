@@ -11,7 +11,6 @@ const Slider = styled.input.attrs(() => ({
   :focus {
     outline: none;
   }
-  ${props => props.theme.media.desktopL`display: none;`}
   ::-webkit-slider-runnable-track {
     width: 100%;
     height: 2px;
@@ -79,10 +78,12 @@ const Slider = styled.input.attrs(() => ({
 
 const Photo = styled(Img)`
   width: 100% !important;
-  min-width: 160px;
+  min-width: 280px;
   margin: 1rem;
-
-  ${props => props.theme.media.desktop`  max-width: 410px;`}
+  ${props => props.theme.media.mobileL`  min-width: 320px;`}
+  ${props => props.theme.media.tablet`  min-width: 360px;`}
+  ${props => props.theme.media.laptop`  min-width: 400px;`}
+  ${props => props.theme.media.desktop`  min-width: 520px;`}
 `
 
 const Carousel = styled.div`
