@@ -11,6 +11,7 @@ const Slider = styled.input.attrs(() => ({
   :focus {
     outline: none;
   }
+  ${props => props.theme.media.desktopL`display: none;`}
   ::-webkit-slider-runnable-track {
     width: 100%;
     height: 2px;
@@ -23,6 +24,7 @@ const Slider = styled.input.attrs(() => ({
   }
   ::-webkit-slider-thumb {
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border-radius: 0;
     border: 3px solid ${props => props.theme.colors.primaryColor};
     height: 36px;
     width: 36px;
@@ -42,7 +44,37 @@ const Slider = styled.input.attrs(() => ({
       background: rgba(41, 35, 92, 0.2);
     }
   }
-  ${props => props.theme.media.desktop`display: none;`}
+  ::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: rgba(41, 37, 91, 0.1);
+    border-radius: 25px;
+    border: 0px solid #000101;
+  }
+  ::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border-radius: 0;
+    border: 3px solid ${props => props.theme.colors.primaryColor};
+    height: 36px;
+    width: 36px;
+    background: ${props => props.theme.colors.secondaryColor};
+    cursor: pointer;
+    transform: translate(0, 0);
+    background-image: radial-gradient(circle, black 1.5px, transparent 2px);
+    background-position: 3px;
+    background-size: 30px 4px;
+    background-repeat: repeat-x;
+    transition: 0.2s all;
+    :hover {
+      background: rgba(41, 35, 92, 0.2);
+    }
+    :active {
+      background: rgba(41, 35, 92, 0.2);
+    }
+  }
 `
 
 const Photo = styled(Img)`
