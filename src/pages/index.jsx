@@ -85,7 +85,7 @@ const IndexPage = () => {
               <HeaderContainer>
                 <Box mx={[3, 3, 4, 6, 7]}>
                   <h5>VOL #3 Coming</h5>
-                  <h1>26 September 2019</h1>
+                  <h1>26 Sept. 2019</h1>
                   <Subheader>7PM - 9PM</Subheader>
                   <h5>Barbara, Świdnicka 8B</h5>
                 </Box>
