@@ -78,7 +78,7 @@ class Navbar extends React.Component {
     const { menuOpen, onTop } = this.state
     return (
       <Nav px={[3, 3, 4, 6, 7]} py={[3, 3, 4]} onTop={onTop}>
-        <Nav.SiteLogo href="https://www.youtube.com/channel/UCg_ptb-U75e7BprLCGS4s1g">
+        <Nav.SiteLogo href="/">
           <Logo.GraphQLWroclaw />
           <Logo.GraphQLWroclawWithBrand />
         </Nav.SiteLogo>
@@ -143,7 +143,7 @@ class Navbar extends React.Component {
                     <Logo.Youtube />
                   </a>
                   <a
-                    href="https://www.facebook.com/mirumeelabs/"
+                    href="https://twitter.com/GraphQLWroclaw"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

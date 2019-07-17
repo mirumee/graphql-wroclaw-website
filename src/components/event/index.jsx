@@ -8,6 +8,7 @@ const EventConteint = props => {
   const [isOpen, setInOpen] = useState(false)
   const { data } = props
   const imageData = data.image.childImageSharp.fluid
+
   return (
     <Event>
       <Event.Placeholder fluid={imageData}>
