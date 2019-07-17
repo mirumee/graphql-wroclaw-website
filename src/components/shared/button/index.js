@@ -1,14 +1,13 @@
 import styled from "styled-components"
 
 export const StyledButton = styled.a`
-  display: block;
+  display: inline-block;
   width: 200px;
   ${props => props.theme.media.tablet`width: 265px`}
   height: 60px;
   top: 10px;
   left: 10px;
   border: none;
-  margin: 0 auto;
   margin-top: 10px;
   position: relative;
   background-color: transparent;

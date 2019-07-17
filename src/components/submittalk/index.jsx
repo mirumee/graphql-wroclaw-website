@@ -17,6 +17,12 @@ const SubmitTalk = styled.div`
     padding: 0;
     ${props => props.theme.media.tablet`padding: 0rem 1rem`}
   }
+
+  a {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `
 
 export default SubmitTalk
