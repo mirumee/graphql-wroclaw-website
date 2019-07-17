@@ -185,7 +185,7 @@ const IndexPage = () => {
                 <p>
                   Knowledge: Cubed. GraphQL Wroclaw is a community of with a
                   shared love for new, powerful technology.
-                  <br/>
+                  <br />
                   We believe that through sharing and engagement, we can make
                   Wroclaw a local and global leader in one of the world’s
                   fastest growing languages.
@@ -215,7 +215,7 @@ const IndexPage = () => {
                   <EventContainer data={event.node} />
                 </Box>
               ))}
-              </Flex>
+            </Flex>
             <Flex
               flexWrap="wrap"
               mx={[3, 3, 4, 6, 7]}
@@ -255,7 +255,7 @@ const IndexPage = () => {
                   textAlign: "center",
                 }}
               >
-                <h2 id="organisers">Organizers</h2>
+                <h2 id="organisers">Organisers</h2>
               </Box>
               <Box width={[1, 1, 1, 1]}>
                 <LogoContainer>
