@@ -4,14 +4,14 @@ import Event from "./styles"
 import PlayButton from "../shared/playButton"
 import Logo from "../../icons"
 
-const EventConteint = props => {
+const EventContent = props => {
   const [isOpen, setInOpen] = useState(false)
   const { data } = props
   const imageData = data.image.childImageSharp.fluid
 
   return (
     <Event>
-      <Event.Placeholder fluid={imageData}>
+      <Event.Placeholder className={`event-img-${props.i}`} fluid={imageData}>
         <Event.Title>
           {data.title}
           <br />
@@ -41,4 +41,4 @@ const EventConteint = props => {
   )
 }
 
-export default EventConteint
+export default EventContent

@@ -210,9 +210,9 @@ const IndexPage = () => {
               >
                 <h2 id="past-events">Past Events</h2>
               </Box>
-              {data.allEventsJson.edges.map(event => (
+              {data.allEventsJson.edges.map((event, i) => (
                 <Box width={[1, 1, 1 / 2]} key={event.node.title}>
-                  <EventContainer data={event.node} />
+                  <EventContainer i={i} data={event.node} />
                 </Box>
               ))}
             </Flex>
