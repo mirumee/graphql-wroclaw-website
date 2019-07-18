@@ -150,14 +150,14 @@ const IndexPage = () => {
             </Flex>*/}
             <Flex
               mx={[3, 3, 4, 6, 7]}
-              mb={[3, 4, 5, 6]}
+              mb={[3, 4, 7, 7]}
               flexWrap="wrap"
               css={{
                 textAlign: "center",
               }}
               justifyContent="center"
             >
-              <Box width={[1, 1, 1, 2 / 6]} mb={[4, 5, 6]}>
+              <Box width={[1, 1, 1, 1 / 2]}>
                 <SubmitTalk>
                   <h2 id="submit-talk">Add more to the power of GraphQL</h2>
                   <StyledButton
@@ -171,7 +171,7 @@ const IndexPage = () => {
             </Flex>
             <Flex
               mx={[3, 3, 4, 6, 7]}
-              mb={[3, 4, 5, 6]}
+              mb={[3, 4, 5, 7]}
               flexWrap="wrap"
               css={{
                 textAlign: "center",
@@ -244,7 +244,7 @@ const IndexPage = () => {
             </Flex>
             <Flex
               mx={[3, 3, 4, 6, 7]}
-              my={4}
+              mb={[3, 4, 7, 7]}
               flexWrap="wrap"
               justifyContent="center"
             >
