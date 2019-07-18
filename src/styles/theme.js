@@ -32,7 +32,7 @@ export const theme = {
   // media queries
   media,
   breakpoints: ["375px", "768px", "1024px", `1440px`, `1920px`],
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  space: [0, 4, 8, 16, 32, 48, 64, 96, 128, 192, 288, 416],
 }
 
 export default theme

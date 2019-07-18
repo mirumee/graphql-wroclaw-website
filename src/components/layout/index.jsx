@@ -6,16 +6,18 @@ import { GlobalStyle } from "../../styles/GlobalStyle"
 import Navbar from "../navbar"
 import Footer from "../footer"
 
-const Layout = ({ children }) => (
-  <ThemeProvider theme={theme}>
-    <>
-      <GlobalStyle />
-      <Navbar />
-      <main>{children}</main>
-      <Footer />
-    </>
-  </ThemeProvider>
-)
+const Layout = ({ children, withoutNav }) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyle />
+        {!withoutNav && <Navbar />}
+        <main>{children}</main>
+        {!withoutNav && <Footer />}
+      </>
+    </ThemeProvider>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

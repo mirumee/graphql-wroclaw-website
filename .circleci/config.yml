@@ -21,9 +21,39 @@ jobs:
             source ~/sdk/bin/activate
             pip install awscli --upgrade
             aws s3 sync $WEBSITE_BUILD_DIR $AWS_S3_STAGE_BUCKET --acl public-read
+  deploy-prod:
+    docker:
+      - image: circleci/python:3.7.3-stretch
+    working_directory: /tmp/prod-deployment
+    steps:
+      - checkout
+      - run:
+          name: Build prod
+          command: |
+            curl -sL https://deb.nodesource.com/setup_11.x | sudo bash -
+            sudo apt-get install -y nodejs
+            npm install
+            npm run build
+      - run:
+          name: Deploy to S3
+          command: |
+            virtualenv ~/sdk
+            source ~/sdk/bin/activate
+            pip install awscli --upgrade
+            aws s3 sync $WEBSITE_BUILD_DIR $AWS_S3_BUCKET --acl public-read
+            aws cloudfront create-invalidation --distribution-id $AWS_CF_DISTRIBUTION --paths "/*"
+
 
 workflows:
   version: 2
   stage-deployment:
     jobs:
       - deploy-stage
+  prod-deployment:
+    jobs:
+      - deploy-prod:
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/

@@ -5,7 +5,7 @@ const Burger = styled.div`
   width: 32px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: flex-end;
   padding: 4px;
 `

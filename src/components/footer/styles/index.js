@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
-import Copyright from "./Copyright";
+import Copyright from "./Copyright"
 
 const Footnote = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ const Footnote = styled.div`
   align-items: center;
   margin: 0 1.5rem 1.5rem 1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid ${props => props.theme.colors.primaryColor};
+  border-top: 1px solid #bfbdce;
 
   ${props => props.theme.media.laptop`
       justify-content: space-between;`};
@@ -19,8 +19,8 @@ const Footnote = styled.div`
     ${props => props.theme.media.laptop`
     display: block`};
   }
-`;
+`
 
-Footnote.Copyright = Copyright;
+Footnote.Copyright = Copyright
 
-export default Footnote;
+export default Footnote

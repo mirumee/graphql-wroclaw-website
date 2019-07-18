@@ -1,18 +1,40 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Slider, { Photo } from "./styles"
+// import Carousel from "@brainhubeu/react-carousel"
+// import "@brainhubeu/react-carousel/lib/style.css"
 
-import Carousel from "@brainhubeu/react-carousel"
-import "@brainhubeu/react-carousel/lib/style.css"
+import Slider, { Photo, Carousel, CarouselWrapper } from "./styles"
 
 class CarouselContainer extends React.Component {
   state = {
-    value: "0",
+    currentValue: 0,
+    carouselWidth: 0,
+  }
+  
+  carouselRef = React.createRef()
+
+  componentDidMount() {
+    window.addEventListener("resize", this.handleResize)
+    this.handleResize()
   }
 
-  handleChange = e => this.setState({ value: e.target ? e.target.value : e })
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.handleResize)
+  }
+
+  handleChange = ({ target }) => {
+    this.setState({ currentValue: target.value })
+  }
+
+  handleResize = e => {
+    const { scrollWidth, offsetWidth } = this.carouselRef.current
+    const offset = scrollWidth - offsetWidth
+    this.setState({ carouselWidth: offset })
+  }
 
   render() {
+    const { currentValue, carouselWidth } = this.state
+  
     return (
       <StaticQuery
         query={graphql`
@@ -20,18 +42,67 @@ class CarouselContainer extends React.Component {
             eventPhotoOne: file(relativePath: { eq: "event_photo_1.jpg" }) {
               childImageSharp {
                 fluid(maxWidth: 580) {
-                  ...GatsbyImageSharpFluid_noBase64
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
-            eventPhotoTwo: file(relativePath: { eq: "event_photo_1.jpg" }) {
+            eventPhotoTwo: file(relativePath: { eq: "event_photo_2.jpg" }) {
               childImageSharp {
                 fluid(maxWidth: 580) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
-            eventPhotoThree: file(relativePath: { eq: "event_photo_1.jpg" }) {
+            eventPhotoThree: file(relativePath: { eq: "event_photo_3.jpg" }) {
+              childImageSharp {
+                fluid(maxWidth: 580) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            eventPhotoFour: file(relativePath: { eq: "event_photo_4.jpg" }) {
+              childImageSharp {
+                fluid(maxWidth: 580) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            eventPhotoFive: file(relativePath: { eq: "event_photo_5.jpg" }) {
+              childImageSharp {
+                fluid(maxWidth: 580) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            eventPhotoSix: file(relativePath: { eq: "event_photo_6.jpg" }) {
+              childImageSharp {
+                fluid(maxWidth: 580) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            eventPhotoSeven: file(relativePath: { eq: "event_photo_7.jpg" }) {
+              childImageSharp {
+                fluid(maxWidth: 580) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            eventPhotoEight: file(relativePath: { eq: "event_photo_8.jpg" }) {
+              childImageSharp {
+                fluid(maxWidth: 580) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            eventPhotoNine: file(relativePath: { eq: "event_photo_9.jpg" }) {
+              childImageSharp {
+                fluid(maxWidth: 580) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            eventPhotoTen: file(relativePath: { eq: "event_photo_10.jpg" }) {
               childImageSharp {
                 fluid(maxWidth: 580) {
                   ...GatsbyImageSharpFluid
@@ -42,25 +113,29 @@ class CarouselContainer extends React.Component {
         `}
         render={data => (
           <>
-            <Carousel
-              value={this.state.value}
-              slidesPerPage={2}
-              slidesPerScroll={1}
-              onChange={this.onChange}
-              addArrowClickHandler={false}
-            >
-              <Photo fluid={data.eventPhotoOne.childImageSharp.fluid} />
-              <Photo fluid={data.eventPhotoTwo.childImageSharp.fluid} />
-              <Photo fluid={data.eventPhotoThree.childImageSharp.fluid} />
-              <Photo fluid={data.eventPhotoOne.childImageSharp.fluid} />
-              <Photo fluid={data.eventPhotoTwo.childImageSharp.fluid} />
-              <Photo fluid={data.eventPhotoThree.childImageSharp.fluid} />
-            </Carousel>
+            <CarouselWrapper>
+              <Carousel
+                sliderValue={currentValue}
+                carouselWidth={carouselWidth}
+                ref={this.carouselRef}
+              >
+                <Photo carouselWidth={carouselWidth} fluid={data.eventPhotoOne.childImageSharp.fluid} />
+                <Photo carouselWidth={carouselWidth} fluid={data.eventPhotoTwo.childImageSharp.fluid} />
+                <Photo carouselWidth={carouselWidth} fluid={data.eventPhotoThree.childImageSharp.fluid} />
+                <Photo carouselWidth={carouselWidth} fluid={data.eventPhotoFour.childImageSharp.fluid} />
+                <Photo carouselWidth={carouselWidth} fluid={data.eventPhotoFive.childImageSharp.fluid} />
+                <Photo carouselWidth={carouselWidth} fluid={data.eventPhotoSix.childImageSharp.fluid} />
+                <Photo carouselWidth={carouselWidth} fluid={data.eventPhotoSeven.childImageSharp.fluid} />
+                <Photo carouselWidth={carouselWidth} fluid={data.eventPhotoEight.childImageSharp.fluid} />
+                <Photo carouselWidth={carouselWidth} fluid={data.eventPhotoNine.childImageSharp.fluid} />
+                <Photo carouselWidth={carouselWidth} fluid={data.eventPhotoTen.childImageSharp.fluid} />
+              </Carousel>
+            </CarouselWrapper>
             <Slider
-              min="0"
-              max="4"
-              value={this.state.value}
-              onChange={e => this.handleChange(e)}
+              min="1"
+              max="100"
+              value={currentValue}
+              onChange={this.handleChange}
             />
           </>
         )}

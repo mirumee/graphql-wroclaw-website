@@ -1,8 +1,17 @@
-# graphql-wroclaw-website
+# GrapgQL Wrocław Website
 
-GraphQL Wrocław Meetup
+### Development: 
 
+`$ npm run server`
 
-# Updating stage
+### Build: 
+
+`$ npm run build`
+
+### Environment: 
+
+Build on node v12.1.0
+
+### Updating stage
 
 Latest commit on repo is deployed automatically to the stage.
