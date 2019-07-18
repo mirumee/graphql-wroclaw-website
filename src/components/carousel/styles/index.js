@@ -37,10 +37,10 @@ const Slider = styled.input.attrs(() => ({
     background-repeat: repeat-x;
     transition: 0.2s all;
     :hover {
-      background: rgba(41, 35, 92, 0.2);
+      background-color: rgba(41, 35, 92, 0.2);
     }
     :active {
-      background: rgba(41, 35, 92, 0.2);
+      background-color: rgba(41, 35, 92, 0.2);
     }
   }
   ::-moz-range-track {
@@ -68,10 +68,10 @@ const Slider = styled.input.attrs(() => ({
     background-repeat: repeat-x;
     transition: 0.2s all;
     :hover {
-      background: rgba(41, 35, 92, 0.2);
+      background-color: rgba(41, 35, 92, 0.2);
     }
     :active {
-      background: rgba(41, 35, 92, 0.2);
+      background-color: rgba(41, 35, 92, 0.2);
     }
   }
 `
