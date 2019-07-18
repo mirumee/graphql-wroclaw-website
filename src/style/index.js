@@ -170,9 +170,9 @@ const LogoContainer = styled.div`
     props.theme.media.laptop`justify-content: center;   max-width: none`}
   a {
     svg {
-      padding: ${between(35, 86, 360, 1920)};
-      height: ${between(106, 259, 360, 1920)};
-      width: ${between(237, 576, 360, 1920)};
+      padding: ${between(35, 60, 360, 1920)};
+      height: ${between(106, 219, 360, 1920)};
+      width: ${between(237, 506, 360, 1920)};
       background: rgba(41, 37, 91, 0.1);
       transition: 0.4s all;
       path {
@@ -194,9 +194,9 @@ const LogoContainer = styled.div`
     ${props => props.theme.media.tablet`margin-top: 0`}
     ${props => props.theme.media.laptop`margin-left: 4vw`}
     svg {
-      padding: ${between(35, 86, 360, 1920)};
-      height: ${between(106, 259, 360, 1920)};
-      width: ${between(237, 576, 360, 1920)};
+      padding: ${between(35, 60, 360, 1920)};
+      height: ${between(106, 219, 360, 1920)};
+      width: ${between(237, 506, 360, 1920)};
       background: rgba(41, 37, 91, 0.1);
       transition: 0.4s all;
       path {
