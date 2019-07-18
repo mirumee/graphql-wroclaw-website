@@ -150,7 +150,7 @@ const IndexPage = () => {
             </Flex>*/}
             <Flex
               mx={[3, 3, 4, 6, 7]}
-              mb={[3, 4, 7, 7]}
+              mb={[5, 5, 7, 7]}
               flexWrap="wrap"
               css={{
                 textAlign: "center",
@@ -244,7 +244,7 @@ const IndexPage = () => {
             </Flex>
             <Flex
               mx={[3, 3, 4, 6, 7]}
-              mb={[3, 4, 7, 7]}
+              mb={[5, 5, 7, 7]}
               flexWrap="wrap"
               justifyContent="center"
             >
