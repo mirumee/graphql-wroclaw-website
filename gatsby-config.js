@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `GraphQL Wroclaw`,
     description: `GraphQL Wroclaw has rapidly grown into a thriving community. Regular Meetup events are a chance to exchange knowledge and experience with our peers. People. Talks. Technology.`,
-    image: "/images/og-image.png",
+    siteUrl: "https://graphqlwroclaw.org",
     author: `@mirumee`,
   },
   plugins: [
