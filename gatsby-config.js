@@ -2,7 +2,8 @@ module.exports = {
   pathPrefix: "/graphql-wroclaw-website",
   siteMetadata: {
     title: `GraphQL Wroclaw`,
-    description: `Events about GraphQL`,
+    description: `GraphQL Wroclaw has rapidly grown into a thriving community. Regular Meetup events are a chance to exchange knowledge and experience with our peers. People. Talks. Technology.`,
+    image: "/images/og-image.png",
     author: `@mirumee`,
   },
   plugins: [
