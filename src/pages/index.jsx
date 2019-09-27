@@ -84,15 +84,15 @@ const IndexPage = () => {
             <StyledBackground id="start">
               <HeaderContainer>
                 <Box mx={[3, 3, 4, 6, 7]}>
-                  <h5>VOL #3 Coming</h5>
-                  <h1>17 Sept. 2019</h1>
+                  <h5>Vol #4 COMING</h5>
+                  <h1>26 NOV. 2019</h1>
                   <Subheader>7PM - 9PM</Subheader>
                   <h5>Barbara, Świdnicka 8B</h5>
                 </Box>
                 <Box mt={[2, 2, 4, 5]} mx={[3, 3, 4, 6, 7]}>
                   <StyledButton
                     text="Sign up on Meetup"
-                    href="https://www.meetup.com/pl-PL/GraphQL-Wroclaw/"
+                    href="https://www.meetup.com/GraphQL-Wroclaw/events/264614444/"
                     target="_blank"
                   />
                 </Box>
