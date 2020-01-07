@@ -21,6 +21,12 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       },
     },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: `${__dirname}/src/icons/graphql_wroclaw_logo.svg`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
