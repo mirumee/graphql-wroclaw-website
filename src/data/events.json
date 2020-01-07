@@ -57,5 +57,38 @@
         "link": "https://www.youtube.com/watch?v=Q4lSAGZWee0"
       }
     ]
+  },
+  {
+    "title": "Graphql Wrocław #4",
+    "description": "",
+    "image": "./images/event_4.jpg",
+    "date": "26.11.2019",
+    "videos": [
+      {
+        "title": "Documenting GraphQL APIs",
+        "author": "Alexey Klochay",
+        "link": "https://www.youtube.com/watch?v=1Guhxakc0pM"
+      },
+      {
+        "title": "Snakes and ladders of GraphQL on our way to the perfect API",
+        "author": "Aleksandr Obukhov",
+        "link": "https://www.youtube.com/watch?v=bFN6TTe6NMk"
+      },
+      {
+        "title": "Schemattic.io - Experiment, mock and share your GraphQL APIs",
+        "author": "Rafał Pitoń",
+        "link": "https://www.youtube.com/watch?v=wClJ9gFgLwI"
+      },
+      {
+        "title": "Overfetching? I have a bird for that!",
+        "author": "Radosław Miernik",
+        "link": "https://www.youtube.com/watch?v=R1ijJiOx8j8"
+      },
+      {
+        "title": "Generating production ready full-stack apps using GraphQL CLI and GraphBack",
+        "author": "Wojtek Trocki",
+        "link": "https://www.youtube.com/watch?v=wmpEiffqxy8"
+      }
+    ]
   }
 ]

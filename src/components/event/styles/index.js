@@ -6,6 +6,7 @@ import Content from "./Content"
 import ContentSeparator from "./ContentSeparator"
 import Title from "./Title"
 import ContentContainer from "./ContentContainer"
+import { between } from "../../../styles/styling-helpers"
 
 const Event = styled.div`
   background-color: rgba(41, 37, 91, 0.05);
@@ -13,7 +14,7 @@ const Event = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
+  width: ${between(290, 664, 320, 1920)};
 
   ${props => props.theme.media.laptop`max-width: 345px;`}
   ${props => props.theme.media.laptopL`max-width: 400px;`}

@@ -84,15 +84,15 @@ const IndexPage = () => {
             <StyledBackground id="start">
               <HeaderContainer>
                 <Box mx={[3, 3, 4, 6, 7]}>
-                  <h5>Vol #4 COMING</h5>
-                  <h1>26 NOV. 2019</h1>
+                  <h5>Vol #5 COMING</h5>
+                  <h1>28 JAN. 2020</h1>
                   <Subheader>7PM - 9PM</Subheader>
                   <h5>Barbara, Świdnicka 8B</h5>
                 </Box>
                 <Box mt={[2, 2, 4, 5]} mx={[3, 3, 4, 6, 7]}>
                   <StyledButton
                     text="Sign up on Meetup"
-                    href="https://www.meetup.com/GraphQL-Wroclaw/events/264614444/"
+                    href="https://www.meetup.com/GraphQL-Wroclaw/events/266805998/"
                     target="_blank"
                   />
                 </Box>
@@ -217,7 +217,7 @@ const IndexPage = () => {
                 <h2 id="past-events">Past Events</h2>
               </Box>
               {data.allEventsJson.edges.map((event, i) => (
-                <Box width={[1, 1, 1 / 2, 1 / 3]} key={event.node.title}>
+                <Box width={[1, 1, 1 / 2]} key={event.node.title}>
                   <EventContainer i={i} data={event.node} />
                 </Box>
               ))}
