@@ -39,5 +39,23 @@
         "link": "https://www.youtube.com/watch?v=Vmv0yC-7aKY"
       }
     ]
+  },
+  {
+    "title": "Graphql Wrocław #3",
+    "description": "",
+    "image": "./images/event_3.jpg",
+    "date": "17.09.2019",
+    "videos": [
+      {
+        "title": "GraphQL in Java",
+        "author": "Marcin Stachniuk",
+        "link": "https://www.youtube.com/watch?v=f4bJHrXqwW8"
+      },
+      {
+        "title": "GraphQL Data Loaders - How to feed your GraphQL API with data the smart way",
+        "author": "Jakub Draganek",
+        "link": "https://www.youtube.com/watch?v=Q4lSAGZWee0"
+      }
+    ]
   }
 ]

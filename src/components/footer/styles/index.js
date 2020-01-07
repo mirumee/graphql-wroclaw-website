@@ -4,10 +4,11 @@ import Copyright from "./Copyright"
 
 const Footnote = styled.div`
   display: flex;
+  max-width: 1600px;
   justify-content: center;
   align-items: center;
-  margin: 0 1.5rem 1.5rem 1.5rem;
-  padding-top: 1.5rem;
+  margin: 0 auto 0 auto;
+  padding: 1.5rem;
   border-top: 1px solid #bfbdce;
 
   ${props => props.theme.media.laptop`

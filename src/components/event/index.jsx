@@ -10,7 +10,7 @@ const EventContent = props => {
   const imageData = data.image.childImageSharp.fluid
 
   return (
-    <Event>
+    <Event offset={props.i}>
       <Event.Placeholder className={`event-img-${props.i}`} fluid={imageData}>
         <Event.Title>
           {data.title}
