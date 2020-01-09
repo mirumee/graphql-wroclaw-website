@@ -85,7 +85,7 @@ const IndexPage = () => {
               <HeaderContainer>
                 <Box mx={[3, 3, 4, 6, 7]}>
                   <h5>Vol #5 COMING</h5>
-                  <h1>28 JAN 2019</h1>
+                  <h1>28 JAN. 2020</h1>
                   <Subheader>7PM - 9PM</Subheader>
                   <h5>Barbara, Świdnicka 8B</h5>
                 </Box>
@@ -157,7 +157,7 @@ const IndexPage = () => {
               }}
               justifyContent="center"
             >
-              <Box width={[1, 1, 1, 1 / 2]}>
+              <Box width={[1, 1, 1, 3/4, 1/2]}>
                 <SubmitTalk>
                   <h2 id="submit-talk">Add more to the power of GraphQL</h2>
                   <StyledButton
@@ -170,11 +170,14 @@ const IndexPage = () => {
               </Box>
             </Flex>
             <Flex
-              mx={[3, 3, 4, 6, 7]}
               mb={[3, 4, 5, 7]}
+              pl={[3]}
               flexWrap="wrap"
               css={{
+                maxWidth: "1600px",
                 textAlign: "center",
+                marginRight: "auto",
+                marginLeft: "auto",
               }}
               justifyContent="center"
             >
@@ -185,7 +188,6 @@ const IndexPage = () => {
                 <p>
                   Knowledge: Cubed. GraphQL Wroclaw is a community of with a
                   shared love for new, powerful technology.
-                  <br />
                   We believe that through sharing and engagement, we can make
                   Wroclaw a local and global leader in one of the world’s
                   fastest growing languages.
@@ -196,7 +198,11 @@ const IndexPage = () => {
               </Box>
             </Flex>
             <Flex
-              mx={[3, 3, 4, 6, 7]}
+              css={{
+                maxWidth: "1600px",
+                marginRight: "auto",
+                marginLeft: "auto",
+              }}
               my={5}
               justifyContent="space-evenly"
               flexWrap="wrap"
@@ -218,7 +224,12 @@ const IndexPage = () => {
             </Flex>
             <Flex
               flexWrap="wrap"
-              mx={[3, 3, 4, 6, 7]}
+              css={{
+                maxWidth: "1600px",
+                marginRight: "auto",
+                marginLeft: "auto",
+              }}
+              px={[3]}
               mb={[3, 4, 5, 6]}
               alignItems="center"
               id="stream"
