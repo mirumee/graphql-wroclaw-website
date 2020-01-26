@@ -2,15 +2,19 @@
 
 Code that runs https://graphqlwroclaw.org
 
-### Development: 
+### Development
 
-`$ npm run server`
+`$ npm run develop`
 
-### Build: 
+### Build
 
 `$ npm run build`
 
-### Environment: 
+### Run site on local web server
+
+`$ npm run serve`
+
+### Environment
 
 Build on node v12.1.0
 
