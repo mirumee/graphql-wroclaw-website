@@ -2,21 +2,21 @@
 
 Code that runs https://graphqlwroclaw.org
 
-### Development: 
+### Development:
 
 `$ npm run server`
 
-### Build: 
+### Build:
 
 `$ npm run build`
 
-### Environment: 
+### Environment:
 
 Build on node v12.1.0
 
 ### Updating stage
 
-Latest commit on repo is deployed automatically to the stage.
+Latest commit on repo is deployed automatically to [the stage](http://stage.graphqlwroclaw.org/).
 
 ### Updating prod
 
