@@ -85,14 +85,14 @@ const IndexPage = () => {
               <HeaderContainer>
                 <Box mx={[3, 3, 4, 6, 7]}>
                   <h5>Vol #5 COMING</h5>
-                  <h1>28 JAN. 2020</h1>
+                  <h1>30 MAR. 2021</h1>
                   <Subheader>7PM - 9PM</Subheader>
-                  <h5>Barbara, Świdnicka 8B</h5>
+                  <h5>Online, YouTube</h5>
                 </Box>
                 <Box mt={[2, 2, 4, 5]} mx={[3, 3, 4, 6, 7]}>
                   <StyledButton
                     text="Sign up on Meetup"
-                    href="https://www.meetup.com/GraphQL-Wroclaw/events/266805998/"
+                    href="https://www.meetup.com/pl-PL/GraphQL-Wroclaw/"
                     target="_blank"
                   />
                 </Box>
@@ -244,7 +244,7 @@ const IndexPage = () => {
                   </p>
                   <StyledButton
                     text="Watch stream"
-                    href="https://www.facebook.com/mirumeelabs/videos/496722830863869/?acontext=%7B%22ref%22%3A52%2C%22source%22%3A1%2C%22action_history%22%3A%22[%7B%5C%22surface%5C%22%3A%5C%22permalink%5C%22%2C%5C%22mechanism%5C%22%3A%5C%22surface%5C%22%2C%5C%22extra_data%5C%22%3A[]%7D]%22%7D&active_tab=discussion"
+                    href="https://www.youtube.com/watch?v=z3bAPs21Uqc&ab_channel=MirumeeLabs"
                     target="_blank"
                   />
                 </OrnamentLeft>
@@ -271,7 +271,7 @@ const IndexPage = () => {
               <Box width={[1, 1, 1, 1]}>
                 <LogoContainer>
                   <a
-                    href="https://getsaleor.com/"
+                    href="https://saleor.io/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
