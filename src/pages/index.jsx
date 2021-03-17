@@ -92,7 +92,7 @@ const IndexPage = () => {
                 <Box mt={[2, 2, 4, 5]} mx={[3, 3, 4, 6, 7]}>
                   <StyledButton
                     text="Sign up on Meetup"
-                    href="https://www.meetup.com/pl-PL/GraphQL-Wroclaw/"
+                    href="https://www.meetup.com/GraphQL-Wroclaw/events/276964778/"
                     target="_blank"
                   />
                 </Box>
