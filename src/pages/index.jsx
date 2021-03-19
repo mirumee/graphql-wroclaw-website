@@ -17,6 +17,7 @@ import {
   FlexContainer,
   OrnamentLeft,
   LogoContainer,
+  PartnerLogoContainer,
   Subheader,
 } from "../style"
 import Logo from "../icons"
@@ -251,6 +252,33 @@ const IndexPage = () => {
               </Box>
               <Box width={[1, 1, 1 / 3, 1 / 2]} order={[2, 2, 1]}>
                 <Img fluid={data.socialBox.childImageSharp.fluid} />
+              </Box>
+            </Flex>
+            <Flex
+              mx={[3, 3, 4, 6, 7]}
+              mb={[5, 5, 7, 7]}
+              flexWrap="wrap"
+              justifyContent="center"
+            >
+              <Box
+                mb={[4, 4, 5, 5, 5, 6, 6]}
+                width={1}
+                css={{
+                  textAlign: "center",
+                }}
+              >
+                <h2 id="partners">Community Partners</h2>
+              </Box>
+              <Box width={[1, 1, 1, 1]}>
+                <PartnerLogoContainer>
+                  <a
+                    href="https://graphql.asia/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Logo.AsiaPartner />
+                  </a>
+                </PartnerLogoContainer>
               </Box>
             </Flex>
             <Flex

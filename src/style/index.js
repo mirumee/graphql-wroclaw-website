@@ -159,6 +159,22 @@ const Subheader = styled.h3`
   ${props => props.theme.media.desktopL`font-size: 9rem;`}
 `
 
+const PartnerLogoContainer = styled.div`
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 360px;
+  transition: 0.2s all;
+  ${props =>
+    props.theme.media.laptop`justify-content: center;   max-width: none`}
+  a {
+    margin: 4% 0;
+    ${props => props.theme.media.tablet`margin-top: 0`}
+    ${props => props.theme.media.laptop`margin-left: 4vw`}
+  }
+`
+
 const LogoContainer = styled.div`
   display: flex;
   margin: 0 auto;
@@ -227,4 +243,5 @@ export {
   PageNotFoundImg,
   PageNotFound,
   LogoContainer,
+  PartnerLogoContainer,
 }

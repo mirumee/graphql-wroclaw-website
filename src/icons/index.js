@@ -8,6 +8,7 @@ import Mirumee from "./mirumee_logo.svg"
 import PoweredByMirumee from "./poweredbymirumee_logo.svg"
 import Arrow from "./arrow.svg"
 import Twitter from "./twitter_logo.svg"
+import AsiaPartner from "./partners/asia.svg"
 
 const Logo = {
   Youtube,
@@ -20,6 +21,7 @@ const Logo = {
   PoweredByMirumee,
   Arrow,
   Twitter,
+  AsiaPartner,
 }
 
 export default Logo
