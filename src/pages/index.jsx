@@ -85,15 +85,15 @@ const IndexPage = () => {
             <StyledBackground id="start">
               <HeaderContainer>
                 <Box mx={[3, 3, 4, 6, 7]}>
-                  <h5>Vol #5 COMING</h5>
-                  <h1>30 MAR. 2021</h1>
+                  <h5>Vol #6 COMING</h5>
+                  <h1>06 JUL. 2021</h1>
                   <Subheader>7PM - 9PM</Subheader>
                   <h5>Online, YouTube</h5>
                 </Box>
                 <Box mt={[2, 2, 4, 5]} mx={[3, 3, 4, 6, 7]}>
                   <StyledButton
                     text="Sign up on Meetup"
-                    href="https://www.meetup.com/GraphQL-Wroclaw/events/276964778/"
+                    href="https://www.meetup.com/GraphQL-Wroclaw"
                     target="_blank"
                   />
                 </Box>
@@ -158,7 +158,7 @@ const IndexPage = () => {
               }}
               justifyContent="center"
             >
-              <Box width={[1, 1, 1, 3/4, 1/2]}>
+              <Box width={[1, 1, 1, 3 / 4, 1 / 2]}>
                 <SubmitTalk>
                   <h2 id="submit-talk">Add more to the power of GraphQL</h2>
                   <StyledButton
@@ -188,10 +188,10 @@ const IndexPage = () => {
               <Box width={[1, 1, 4 / 6, 2 / 3]} mb={[3, 4, 5, 6]}>
                 <p>
                   Knowledge: Cubed. GraphQL Wroclaw is a community of with a
-                  shared love for new, powerful technology.
-                  We believe that through sharing and engagement, we can make
-                  Wroclaw a local and global leader in one of the world’s
-                  fastest growing languages.
+                  shared love for new, powerful technology. We believe that
+                  through sharing and engagement, we can make Wroclaw a local
+                  and global leader in one of the world’s fastest growing
+                  languages.
                 </p>
               </Box>
               <Box width={1}>
@@ -240,8 +240,8 @@ const IndexPage = () => {
                   <h2>Join our Stream</h2>
                   <p>
                     The seats for our events are snapped up in quick time. No
-                    matter where you are, if you can’t make the event, join
-                    the live stream and become part of the community.
+                    matter where you are, if you can’t make the event, join the
+                    live stream and become part of the community.
                   </p>
                   <StyledButton
                     text="Watch stream"
