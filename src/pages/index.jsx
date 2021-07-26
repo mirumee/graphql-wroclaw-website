@@ -245,7 +245,7 @@ const IndexPage = () => {
                   </p>
                   <StyledButton
                     text="Watch stream"
-                    href="https://www.youtube.com/watch?v=z3bAPs21Uqc&ab_channel=MirumeeLabs"
+                    href="https://youtu.be/z8AuMQmErs8"
                     target="_blank"
                   />
                 </OrnamentLeft>
