@@ -88,7 +88,11 @@ const IndexPage = () => {
                   <h5>Vol #7 COMING</h5>
                   <h1>05 OCT. 2021</h1>
                   <Subheader>7PM - 9PM</Subheader>
-                  <h5>Online, YouTube</h5>
+                  <h5>
+                    Online, YouTube
+                    <br />
+                    Offline, Mirumee HQ
+                  </h5>
                 </Box>
                 <Box mt={[2, 2, 4, 5]} mx={[3, 3, 4, 6, 7]}>
                   <StyledButton
