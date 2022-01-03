@@ -85,11 +85,11 @@ const IndexPage = () => {
             <StyledBackground id="start">
               <HeaderContainer>
                 <Box mx={[3, 3, 4, 6, 7]}>
-                  <h5>Vol #7 COMING</h5>
-                  <h1>05 OCT. 2021</h1>
+                  <h5>Vol #8 COMING</h5>
+                  <h1>18 JAN. 2022</h1>
                   <Subheader>7PM - 9PM</Subheader>
                   <h5>
-                    Online, YouTube
+                    YouTube
                     <br />
                     Offline, Mirumee HQ
                   </h5>
