@@ -89,9 +89,7 @@ const IndexPage = () => {
                   <h1>18 JAN. 2022</h1>
                   <Subheader>7PM - 9PM</Subheader>
                   <h5>
-                    YouTube
-                    <br />
-                    Offline, Mirumee HQ
+                    Online YouTube
                   </h5>
                 </Box>
                 <Box mt={[2, 2, 4, 5]} mx={[3, 3, 4, 6, 7]}>
@@ -249,7 +247,7 @@ const IndexPage = () => {
                   </p>
                   <StyledButton
                     text="Watch stream"
-                    href="https://youtu.be/z8AuMQmErs8"
+                    href="https://youtu.be/7qrUxMurk24"
                     target="_blank"
                   />
                 </OrnamentLeft>
