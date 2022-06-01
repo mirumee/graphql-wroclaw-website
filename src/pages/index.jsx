@@ -85,11 +85,11 @@ const IndexPage = () => {
             <StyledBackground id="start">
               <HeaderContainer>
                 <Box mx={[3, 3, 4, 6, 7]}>
-                  <h5>Vol #9 COMING</h5>
-                  <h1>05 APR. 2022</h1>
-                  <Subheader>7PM - 9PM</Subheader>
+                  <h5>Vol #10 COMING</h5>
+                  <h1>05 JUL. 2022</h1>
+                  <Subheader>7PM - 10PM</Subheader>
                   <h5>
-                    Online YouTube
+                    Barbara, Swidnicka 8B, Wroclaw
                   </h5>
                 </Box>
                 <Box mt={[2, 2, 4, 5]} mx={[3, 3, 4, 6, 7]}>
